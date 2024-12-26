@@ -1,7 +1,11 @@
-id: 'insufficient_monitoring'
-name: 'Insufficient Monitoring'
-description: 'Limited system visibility delays issue detection and prolongs recovery.'
-metrics_impacted:
-  - 'mean_time_to_restore'
-remediation_actions:
-  - 'add_monitoring'
+id: insufficient_monitoring
+name: Insufficient Monitoring
+description: Lack of proper system monitoring and observability leading to delayed incident detection
+metricsImpacted:
+  - mean_time_to_recovery
+  - system_availability
+  - change_failure_rate
+remediationActions:
+  - implement_observability
+  - add_monitoring
+  - accelerate_incident_response

@@ -60,4 +60,25 @@ data class RemediationAction(
 
     @Schema(description = "Detailed description of the remediation action", example = "Set up continuous integration pipelines to automatically build, test, and deploy code changes")
     val description: String
+)
+
+@Schema(description = "Metric value information")
+data class MetricValue(
+    @Schema(description = "Unique identifier of the metric value")
+    val id: String,
+
+    @Schema(description = "ID of the metric this value belongs to")
+    val metricId: String,
+
+    @Schema(description = "ID of the team this metric value belongs to")
+    val teamId: String,
+
+    @Schema(description = "The actual value of the metric")
+    val value: Double,
+
+    @Schema(description = "The timestamp when this value was recorded", example = "2024-01-01T00:00:00Z")
+    val timestamp: java.time.Instant,
+
+    @Schema(description = "Optional notes about this metric value")
+    val notes: String? = null
 ) 

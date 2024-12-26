@@ -11,7 +11,14 @@ import com.eex.metrics.model.RemediationAction
 import com.eex.metrics.repository.DrivingFactorRepository
 import com.eex.metrics.repository.MetricRepository
 import com.eex.metrics.repository.RemediationActionRepository
+import com.fasterxml.jackson.databind.ObjectMapper
+import com.fasterxml.jackson.dataformat.yaml.YAMLFactory
+import com.fasterxml.jackson.module.kotlin.KotlinModule
+import com.fasterxml.jackson.module.kotlin.readValue
+import org.springframework.core.io.Resource
+import org.springframework.core.io.support.PathMatchingResourcePatternResolver
 import org.springframework.stereotype.Service
+import org.springframework.transaction.annotation.Transactional
 
 @Service
 class YamlService(
@@ -19,6 +26,52 @@ class YamlService(
     private val drivingFactorRepository: DrivingFactorRepository,
     private val remediationActionRepository: RemediationActionRepository
 ) {
+    private val yamlMapper = ObjectMapper(YAMLFactory()).registerModule(KotlinModule.Builder().build())
+    private val resourceResolver = PathMatchingResourcePatternResolver()
+
+    @Transactional
+    fun loadAllFromYaml() {
+        loadRemediationActionsFromYaml()
+        loadDrivingFactorsFromYaml()
+        loadMetricsFromYaml()
+    }
+
+    private fun loadMetricsFromYaml() {
+        val resources = resourceResolver.getResources("classpath:metrics/**/*.yml")
+        resources.forEach { resource ->
+            try {
+                val metric: Metric = yamlMapper.readValue(resource.inputStream)
+                saveMetric(metric)
+            } catch (e: Exception) {
+                println("Error loading metric from ${resource.filename}: ${e.message}")
+            }
+        }
+    }
+
+    private fun loadDrivingFactorsFromYaml() {
+        val resources = resourceResolver.getResources("classpath:driving_factors/**/*.yml")
+        resources.forEach { resource ->
+            try {
+                val factor: DrivingFactor = yamlMapper.readValue(resource.inputStream)
+                saveDrivingFactor(factor)
+            } catch (e: Exception) {
+                println("Error loading driving factor from ${resource.filename}: ${e.message}")
+            }
+        }
+    }
+
+    private fun loadRemediationActionsFromYaml() {
+        val resources = resourceResolver.getResources("classpath:remediation_actions/**/*.yml")
+        resources.forEach { resource ->
+            try {
+                val action: RemediationAction = yamlMapper.readValue(resource.inputStream)
+                saveRemediationAction(action)
+            } catch (e: Exception) {
+                println("Error loading remediation action from ${resource.filename}: ${e.message}")
+            }
+        }
+    }
+
     fun readMetric(id: String): Metric? {
         return metricRepository.findById(id).map { entity ->
             Metric(
@@ -57,6 +110,7 @@ class YamlService(
         }.orElse(null)
     }
     
+    @Transactional
     fun saveMetric(metric: Metric) {
         val relationships = MetricRelationshipsEntity(
             leadingIndicators = metric.relationships.leadingIndicators,
@@ -81,6 +135,7 @@ class YamlService(
         metricRepository.save(entity)
     }
     
+    @Transactional
     fun saveDrivingFactor(factor: DrivingFactor) {
         val entity = DrivingFactorEntity(
             id = factor.id,
@@ -98,6 +153,7 @@ class YamlService(
         drivingFactorRepository.save(entity)
     }
     
+    @Transactional
     fun saveRemediationAction(action: RemediationAction) {
         val entity = RemediationActionEntity(
             id = action.id,

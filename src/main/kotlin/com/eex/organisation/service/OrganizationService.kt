@@ -13,6 +13,7 @@ import org.springframework.stereotype.Service
 import org.springframework.transaction.annotation.Transactional
 
 @Service
+@Transactional
 class OrganizationService(
     private val departmentRepository: DepartmentRepository,
     private val teamRepository: TeamRepository,
@@ -26,25 +27,23 @@ class OrganizationService(
         return departmentRepository.findAll().map { it.toModel() }
     }
 
-    fun getSubDepartments(parentId: String): List<Department> {
-        return departmentRepository.findByParentDepartmentId(parentId).map { it.toModel() }
+    fun getSubDepartments(id: String): List<Department> {
+        return departmentRepository.findByParentDepartmentId(id).map { it.toModel() }
     }
 
-    @Transactional
     fun createDepartment(department: Department): Department {
-        val parentDepartment = department.parentDepartmentId?.let {
-            departmentRepository.findById(it).orElse(null)
-        }
-
         val entity = DepartmentEntity(
             id = department.id,
             name = department.name,
-            description = department.description,
-            parentDepartment = parentDepartment
+            description = department.description
         )
 
-        // Save the entity first
-        departmentRepository.save(entity)
+        // Set parent department if specified
+        department.parentDepartmentId?.let { parentId ->
+            departmentRepository.findById(parentId).ifPresent { parentEntity ->
+                entity.parentDepartment = parentEntity
+            }
+        }
 
         // Link metrics
         department.metricIds.forEach { metricId ->
@@ -90,9 +89,6 @@ class OrganizationService(
             department = department
         )
 
-        // Save the entity first
-        teamRepository.save(entity)
-
         // Link metrics
         team.metricIds.forEach { metricId ->
             metricRepository.findById(metricId).ifPresent { metricEntity ->
@@ -109,24 +105,8 @@ class OrganizationService(
             name = name,
             description = description,
             parentDepartmentId = parentDepartment?.id,
-            metricIds = metrics.map { it.id },
             subDepartmentIds = subDepartments.map { it.id },
-            teamIds = teams.map { it.id },
-            metrics = metrics.map { 
-                Metric(
-                    id = it.id,
-                    name = it.name,
-                    description = it.description,
-                    type = it.type,
-                    drivingFactors = it.drivingFactors.map { df -> df.id },
-                    relationships = MetricRelationships(
-                        leadingIndicators = it.relationships.leadingIndicators,
-                        laggingIndicators = it.relationships.laggingIndicators
-                    )
-                )
-            },
-            subDepartments = subDepartments.map { it.toModel() },
-            teams = teams.map { it.toModel() }
+            metricIds = metrics.map { it.id }
         )
     }
 

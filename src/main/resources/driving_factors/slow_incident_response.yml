@@ -1,7 +1,11 @@
-id: 'slow_incident_response'
-name: 'Slow Incident Response'
-description: 'Lengthy triage and resolution processes increase downtime after production failures.'
-metrics_impacted:
-  - 'mean_time_to_restore'
-remediation_actions:
-  - 'accelerate_incident_response'
+id: slow_incident_response
+name: Slow Incident Response
+description: Delayed response to production incidents leading to extended service disruptions
+metricsImpacted:
+  - mean_time_to_recovery
+  - system_availability
+  - change_failure_rate
+remediationActions:
+  - accelerate_incident_response
+  - implement_observability
+  - add_monitoring
