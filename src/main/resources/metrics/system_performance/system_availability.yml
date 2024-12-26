@@ -1,0 +1,12 @@
+id: system_availability
+name: System Availability
+description: Measures the percentage of time the system is operational and accessible to users
+type: quantitative
+drivingFactors:
+  - system_reliability_issues
+  - production_stability
+relationships:
+  leadingIndicators: []
+  laggingIndicators:
+    - deployment_frequency
+    - change_failure_rate 

@@ -1,0 +1,15 @@
+id: lead_time_for_changes
+name: Lead Time for Changes
+description: Measures the time it takes for a code change to go from commit to production deployment
+type: quantitative
+drivingFactors:
+  - release_complexity
+  - integration_delays
+  - manual_process_overhead
+relationships:
+  leadingIndicators:
+    - code_review_time
+    - build_time
+  laggingIndicators:
+    - deployment_frequency
+    - change_failure_rate 

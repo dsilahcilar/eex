@@ -1,0 +1,11 @@
+id: insufficient_test_coverage
+name: Insufficient Test Coverage
+description: Lack of comprehensive test coverage leading to increased risk of defects and regressions
+metricsImpacted:
+  - test_coverage
+  - change_failure_rate
+  - defect_density
+remediationActions:
+  - improve_test_coverage
+  - testing_training
+  - establish_code_review_guidelines

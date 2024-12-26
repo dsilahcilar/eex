@@ -1,0 +1,11 @@
+id: unclear_requirements
+name: Unclear Requirements
+description: Lack of clear and well-defined requirements leading to misaligned implementations and rework
+metricsImpacted:
+  - requirements_clarity
+  - change_failure_rate
+  - lead_time_for_changes
+remediationActions:
+  - refine_requirements
+  - establish_code_review_guidelines
+  - improve_test_coverage

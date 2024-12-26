@@ -1,0 +1,15 @@
+id: knowledge_sharing_index
+name: Knowledge Sharing Index
+description: Measures the effectiveness of knowledge distribution within teams through documentation, mentoring, and collaboration
+type: qualitative
+drivingFactors:
+  - knowledge_sharing_gaps
+  - team_collaboration_issues
+  - skill_development_needs
+relationships:
+  leadingIndicators:
+    - developer_satisfaction
+    - team_collaboration_score
+  laggingIndicators:
+    - code_review_coverage
+    - technical_debt_ratio 

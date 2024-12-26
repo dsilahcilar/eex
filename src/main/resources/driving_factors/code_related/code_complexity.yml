@@ -1,0 +1,11 @@
+id: code_complexity
+name: Code Complexity
+description: Excessive complexity in codebase making it difficult to understand, maintain, and modify safely
+metrics_impacted:
+  - technical_debt_ratio
+  - code_review_time
+  - change_failure_rate
+remediation_actions:
+  - establish_code_review_guidelines
+  - implement_tech_debt_sprints
+  - improve_test_coverage 

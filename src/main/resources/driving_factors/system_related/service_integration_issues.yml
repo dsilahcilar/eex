@@ -1,0 +1,11 @@
+id: service_integration_issues
+name: Service Integration Issues
+description: Problems with service interactions and dependencies affecting system stability and performance
+metricsImpacted:
+  - change_failure_rate
+  - mean_time_to_recovery
+  - system_availability
+remediationActions:
+  - implement_contract_testing
+  - implement_observability
+  - improve_test_coverage 

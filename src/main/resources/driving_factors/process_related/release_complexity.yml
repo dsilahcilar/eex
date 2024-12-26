@@ -1,0 +1,11 @@
+id: release_complexity
+name: Release Complexity
+description: Challenges in managing and coordinating software releases, including dependencies, timing, and coordination
+metrics_impacted:
+  - lead_time_for_changes
+  - deployment_frequency
+  - change_failure_rate
+remediation_actions:
+  - implement_feature_flags
+  - adopt_trunk_based_development
+  - implement_ci 
