@@ -1,0 +1,12 @@
+id: 'lead_time_for_changes'
+name: 'Lead Time for Changes'
+description: 'Time from code commit to successfully running in production.'
+type: 'quantitative'
+drivingFactors:
+  - 'lack_of_automation'
+  - 'insufficient_test_coverage'
+relationships:
+  leadingIndicators:
+    - 'code_review_latency'
+  laggingIndicators:
+    - 'change_failure_rate'

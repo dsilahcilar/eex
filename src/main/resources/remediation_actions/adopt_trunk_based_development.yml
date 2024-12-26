@@ -1,0 +1,5 @@
+id: 'adopt_trunk_based_development'
+name: 'Adopt Trunk-Based Development'
+description: >
+  Integrate changes frequently into a shared trunk branch,
+  minimizing merge conflicts and speeding up deployments.

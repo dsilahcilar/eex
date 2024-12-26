@@ -1,0 +1,7 @@
+id: 'insufficient_monitoring'
+name: 'Insufficient Monitoring'
+description: 'Limited system visibility delays issue detection and prolongs recovery.'
+metrics_impacted:
+  - 'mean_time_to_restore'
+remediation_actions:
+  - 'add_monitoring'

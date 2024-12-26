@@ -1,0 +1,3 @@
+id: 'implement_chaos_engineering'
+name: 'Implement Chaos Engineering'
+description: 'Introduce controlled failure scenarios to build resilient systems, identify weaknesses, and improve system reliability and recovery procedures.' 

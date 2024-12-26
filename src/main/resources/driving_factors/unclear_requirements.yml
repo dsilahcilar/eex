@@ -1,0 +1,7 @@
+id: 'unclear_requirements'
+name: 'Unclear Requirements'
+description: 'Vague or constantly changing requirements cause rework and raise the change failure rate.'
+metrics_impacted:
+  - 'change_failure_rate'
+remediation_actions:
+  - 'refine_requirements'

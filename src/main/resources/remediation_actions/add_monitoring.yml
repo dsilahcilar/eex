@@ -1,0 +1,5 @@
+id: 'add_monitoring'
+name: 'Add Monitoring & Alerting'
+description: >
+  Use tools (e.g., Prometheus, Datadog) to track system health in real time
+  and create automated alerts for critical issues.

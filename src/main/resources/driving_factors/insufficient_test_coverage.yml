@@ -1,0 +1,10 @@
+id: 'insufficient_test_coverage'
+name: 'Insufficient Test Coverage'
+description: 'Inadequate testing leads to undiscovered bugs and higher production failure rates.'
+metrics_impacted:
+  - 'deployment_frequency'
+  - 'lead_time_for_changes'
+  - 'change_failure_rate'
+remediation_actions:
+  - 'add_test_coverage'
+  - 'testing_training'

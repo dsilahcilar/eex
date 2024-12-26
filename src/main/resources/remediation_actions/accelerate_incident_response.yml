@@ -1,0 +1,5 @@
+id: 'accelerate_incident_response'
+name: 'Accelerate Incident Response'
+description: >
+  Streamline on-call rotations, incident playbooks, and escalation policies
+  to reduce mean time to restore after failures.
