@@ -1,0 +1,36 @@
+id: 'agile_requirements_workshop'
+name: 'Agile Requirements Workshop'
+description: 'Regular workshops to collaboratively refine requirements and improve team understanding using agile methodologies'
+type: 'organizational'
+implementation_complexity: 'LOW'
+time_investment: 'MEDIUM'
+cost_investment: 'LOW'
+
+addresses_driving_factors:
+  - 'unclear_requirements'
+  - 'skill_development_needs'
+
+expected_outcomes:
+  - 'Better requirement understanding'
+  - 'Improved stakeholder collaboration'
+  - 'Enhanced team capability in requirements analysis'
+  - 'Faster requirement refinement cycles'
+
+implementation_steps:
+  - 'Design workshop format and schedule'
+  - 'Create workshop materials and exercises'
+  - 'Train facilitators'
+  - 'Schedule regular sessions'
+  - 'Collect and incorporate feedback'
+
+success_metrics:
+  - 'Workshop participation rate'
+  - 'Requirement clarity scores'
+  - 'Team confidence in requirements'
+  - 'Reduction in requirement changes'
+
+resources_needed:
+  - 'Workshop facilitation tools'
+  - 'Training materials'
+  - 'Collaboration space'
+  - 'Participant time commitment' 

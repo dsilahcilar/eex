@@ -8,11 +8,20 @@ impact_areas:
   - 'Onboarding efficiency'
   - 'Development speed'
   - 'Code quality'
-remediation_categories:
-  - 'Documentation practices'
-  - 'Mentoring programs'
-  - 'Knowledge base creation'
-  - 'Pair programming'
+
+remediation_actions:
+  - id: 'knowledge_base_enhancement'
+    primary: true
+    impact: 'HIGH'
+  - id: 'mentorship_program'
+    primary: true
+    impact: 'HIGH'
+  - id: 'collaborative_development_practices'
+    primary: false
+    impact: 'MEDIUM'
+  - id: 'team_communication_framework'
+    primary: false
+    impact: 'MEDIUM'
 
 metric_impacts:
   code_clarity_and_readability:

@@ -8,11 +8,23 @@ impact_areas:
   - 'Development efficiency'
   - 'Bug frequency'
   - 'Onboarding difficulty'
-remediation_categories:
-  - 'Code refactoring'
-  - 'Design patterns implementation'
-  - 'Code review standards'
-  - 'Static analysis tools'
+
+remediation_actions:
+  - id: 'architecture_simplification'
+    primary: true
+    impact: 'HIGH'
+  - id: 'technical_debt_reduction'
+    primary: true
+    impact: 'HIGH'
+  - id: 'code_quality_initiative'
+    primary: true
+    impact: 'HIGH'
+  - id: 'code_review_guidelines'
+    primary: false
+    impact: 'MEDIUM'
+  - id: 'code_review_process'
+    primary: false
+    impact: 'MEDIUM'
 
 metric_impacts:
   code_clarity_and_readability:

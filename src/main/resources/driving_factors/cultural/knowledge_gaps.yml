@@ -8,11 +8,17 @@ impact_areas:
   - 'Decision quality'
   - 'Innovation ability'
   - 'Team autonomy'
-remediation_categories:
-  - 'Training programs'
-  - 'Knowledge sharing'
-  - 'Documentation systems'
-  - 'Mentorship initiatives'
+
+remediation_actions:
+  - id: 'mentorship_program'
+    primary: true
+    impact: 'HIGH'
+  - id: 'knowledge_base_enhancement'
+    primary: true
+    impact: 'HIGH'
+  - id: 'collaborative_development_practices'
+    primary: false
+    impact: 'MEDIUM'
 
 metric_impacts:
   deep_work_satisfaction:

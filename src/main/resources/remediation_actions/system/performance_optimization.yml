@@ -1,0 +1,32 @@
+id: 'performance_optimization'
+name: 'Performance Optimization'
+description: 'Systematic approach to identify and resolve performance bottlenecks across the system'
+type: 'system'
+implementation_complexity: 'HIGH'
+time_investment: 'HIGH'
+cost_investment: 'MEDIUM'
+
+expected_outcomes:
+  - 'Improved response times'
+  - 'Better resource utilization'
+  - 'Increased system throughput'
+  - 'Enhanced scalability'
+
+implementation_steps:
+  - 'Performance profiling and analysis'
+  - 'Identify optimization targets'
+  - 'Implement caching strategies'
+  - 'Optimize resource usage'
+  - 'Set up performance monitoring'
+
+success_metrics:
+  - 'Response time improvements'
+  - 'Resource utilization reduction'
+  - 'Throughput increases'
+  - 'Cache hit ratios'
+
+resources_needed:
+  - 'Performance monitoring tools'
+  - 'Profiling software'
+  - 'Testing environment'
+  - 'Analysis tools' 

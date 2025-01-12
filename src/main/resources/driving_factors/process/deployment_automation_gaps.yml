@@ -8,11 +8,17 @@ impact_areas:
   - 'Release reliability'
   - 'Team productivity'
   - 'Process consistency'
-remediation_categories:
-  - 'CI/CD automation'
-  - 'Pipeline optimization'
-  - 'Infrastructure as code'
-  - 'Release automation'
+
+remediation_actions:
+  - id: 'process_automation_initiative'
+    primary: true
+    impact: 'HIGH'
+  - id: 'cicd_pipeline_enhancement'
+    primary: true
+    impact: 'HIGH'
+  - id: 'workflow_optimization'
+    primary: false
+    impact: 'MEDIUM'
 
 metric_impacts:
   deployment_frequency:

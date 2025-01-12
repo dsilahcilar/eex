@@ -8,11 +8,20 @@ impact_areas:
   - 'Code quality'
   - 'Release reliability'
   - 'Development speed'
-remediation_categories:
-  - 'Test automation'
-  - 'Coverage analysis'
-  - 'Testing strategy'
-  - 'CI/CD integration'
+
+remediation_actions:
+  - id: 'testing_framework_enhancement'
+    primary: true
+    impact: 'HIGH'
+  - id: 'contract_testing'
+    primary: false
+    impact: 'MEDIUM'
+  - id: 'code_quality_initiative'
+    primary: false
+    impact: 'MEDIUM'
+  - id: 'code_review_process'
+    primary: false
+    impact: 'LOW'
 
 metric_impacts:
   test_coverage:

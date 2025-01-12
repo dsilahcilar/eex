@@ -1,3 +1,0 @@
-id: 'implement_feature_flags'
-name: 'Implement Feature Flags'
-description: 'Use feature flags for safer deployments, A/B testing, and gradual rollouts, enabling better control over feature releases and risk mitigation.' 

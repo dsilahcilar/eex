@@ -8,11 +8,17 @@ impact_areas:
   - 'Knowledge sharing'
   - 'Development flow'
   - 'Cross-team coordination'
-remediation_categories:
-  - 'Communication tools'
-  - 'Collaboration practices'
-  - 'Team processes'
-  - 'Documentation systems'
+
+remediation_actions:
+  - id: 'team_communication_framework'
+    primary: true
+    impact: 'HIGH'
+  - id: 'collaborative_development_practices'
+    primary: true
+    impact: 'HIGH'
+  - id: 'knowledge_base_enhancement'
+    primary: false
+    impact: 'MEDIUM'
 
 metric_impacts:
   deep_work_satisfaction:

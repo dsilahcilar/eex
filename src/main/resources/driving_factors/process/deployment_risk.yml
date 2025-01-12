@@ -8,11 +8,17 @@ impact_areas:
   - 'Release confidence'
   - 'Team productivity'
   - 'Customer satisfaction'
-remediation_categories:
-  - 'Deployment automation'
-  - 'Testing enhancement'
-  - 'Rollback procedures'
-  - 'Monitoring improvement'
+
+remediation_actions:
+  - id: 'deployment_safety_measures'
+    primary: true
+    impact: 'HIGH'
+  - id: 'cicd_pipeline_enhancement'
+    primary: true
+    impact: 'HIGH'
+  - id: 'quality_assurance_framework'
+    primary: false
+    impact: 'MEDIUM'
 
 metric_impacts:
   deployment_frequency:

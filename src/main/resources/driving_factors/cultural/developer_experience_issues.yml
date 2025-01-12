@@ -8,11 +8,17 @@ impact_areas:
   - 'Team morale'
   - 'Code quality'
   - 'Innovation capacity'
-remediation_categories:
-  - 'Tool optimization'
-  - 'Environment improvements'
-  - 'Process streamlining'
-  - 'Developer enablement'
+
+remediation_actions:
+  - id: 'developer_experience_optimization'
+    primary: true
+    impact: 'HIGH'
+  - id: 'workflow_optimization'
+    primary: false
+    impact: 'MEDIUM'
+  - id: 'mentorship_program'
+    primary: false
+    impact: 'LOW'
 
 metric_impacts:
   deep_work_satisfaction:

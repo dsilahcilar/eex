@@ -8,11 +8,20 @@ impact_areas:
   - 'Innovation potential'
   - 'Technical quality'
   - 'Career growth'
-remediation_categories:
-  - 'Training programs'
-  - 'Technical workshops'
-  - 'Career development'
-  - 'Learning resources'
+
+remediation_actions:
+  - id: 'technical_training_program'
+    primary: true
+    impact: 'HIGH'
+  - id: 'career_development_framework'
+    primary: true
+    impact: 'HIGH'
+  - id: 'agile_requirements_workshop'
+    primary: false
+    impact: 'MEDIUM'
+  - id: 'mentorship_program'
+    primary: false
+    impact: 'MEDIUM'
 
 metric_impacts:
   system_complexity_perception:

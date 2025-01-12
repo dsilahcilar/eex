@@ -8,11 +8,17 @@ impact_areas:
   - 'Problem resolution'
   - 'System visibility'
   - 'Performance tracking'
-remediation_categories:
-  - 'Monitoring implementation'
-  - 'Alerting enhancement'
-  - 'Logging improvements'
-  - 'Observability tools'
+
+remediation_actions:
+  - id: 'monitoring_infrastructure'
+    primary: true
+    impact: 'HIGH'
+  - id: 'system_reliability_program'
+    primary: false
+    impact: 'MEDIUM'
+  - id: 'service_resilience_framework'
+    primary: false
+    impact: 'MEDIUM'
 
 metric_impacts:
   service_availability:

@@ -8,11 +8,17 @@ impact_areas:
   - 'User experience'
   - 'Resource efficiency'
   - 'Service quality'
-remediation_categories:
-  - 'Performance optimization'
-  - 'Resource management'
-  - 'Scaling improvements'
-  - 'Caching strategies'
+
+remediation_actions:
+  - id: 'performance_optimization'
+    primary: true
+    impact: 'HIGH'
+  - id: 'monitoring_infrastructure'
+    primary: false
+    impact: 'MEDIUM'
+  - id: 'system_reliability_program'
+    primary: false
+    impact: 'MEDIUM'
 
 metric_impacts:
   service_availability:

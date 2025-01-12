@@ -8,11 +8,17 @@ impact_areas:
   - 'Product quality'
   - 'Team alignment'
   - 'Delivery timeline'
-remediation_categories:
-  - 'Requirements refinement'
-  - 'Stakeholder engagement'
-  - 'Documentation standards'
-  - 'Review processes'
+
+remediation_actions:
+  - id: 'requirements_refinement_process'
+    primary: true
+    impact: 'HIGH'
+  - id: 'agile_requirements_workshop'
+    primary: true
+    impact: 'HIGH'
+  - id: 'stakeholder_engagement_framework'
+    primary: true
+    impact: 'HIGH'
 
 metric_impacts:
   lead_time_for_changes:

@@ -8,11 +8,23 @@ impact_areas:
   - 'Service dependencies'
   - 'Data consistency'
   - 'Performance'
-remediation_categories:
-  - 'API standardization'
-  - 'Integration testing'
-  - 'Service contracts'
-  - 'Dependency management'
+
+remediation_actions:
+  - id: 'integration_testing_framework'
+    primary: true
+    impact: 'HIGH'
+  - id: 'contract_testing'
+    primary: true
+    impact: 'HIGH'
+  - id: 'service_resilience_framework'
+    primary: true
+    impact: 'HIGH'
+  - id: 'feature_toggles'
+    primary: false
+    impact: 'MEDIUM'
+  - id: 'monitoring_infrastructure'
+    primary: false
+    impact: 'MEDIUM'
 
 metric_impacts:
   service_availability:

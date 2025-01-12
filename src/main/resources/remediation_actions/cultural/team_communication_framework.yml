@@ -1,0 +1,36 @@
+id: 'team_communication_framework'
+name: 'Team Communication Framework'
+description: 'Establish structured communication channels, protocols, and tools to improve team collaboration and information flow'
+type: 'cultural'
+implementation_complexity: 'MEDIUM'
+time_investment: 'MEDIUM'
+cost_investment: 'LOW'
+
+addresses_driving_factors:
+  - 'collaboration_friction'
+  - 'knowledge_sharing_gaps'
+
+expected_outcomes:
+  - 'Clearer communication channels'
+  - 'Reduced meeting overhead'
+  - 'Improved information flow'
+  - 'Better cross-team coordination'
+
+implementation_steps:
+  - 'Define communication channels and their purposes'
+  - 'Establish communication protocols'
+  - 'Implement async-first communication practices'
+  - 'Set up team collaboration tools'
+  - 'Create communication guidelines'
+
+success_metrics:
+  - 'Meeting efficiency scores'
+  - 'Response time improvements'
+  - 'Team satisfaction with communication'
+  - 'Cross-team collaboration metrics'
+
+resources_needed:
+  - 'Communication platforms'
+  - 'Documentation tools'
+  - 'Meeting management software'
+  - 'Team guidelines documentation' 

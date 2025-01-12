@@ -8,11 +8,20 @@ impact_areas:
   - 'Service quality'
   - 'User satisfaction'
   - 'Business continuity'
-remediation_categories:
-  - 'Resilience engineering'
-  - 'Error handling'
-  - 'Monitoring enhancement'
-  - 'SLO implementation'
+
+remediation_actions:
+  - id: 'system_reliability_program'
+    primary: true
+    impact: 'HIGH'
+  - id: 'service_resilience_framework'
+    primary: true
+    impact: 'HIGH'
+  - id: 'feature_toggles'
+    primary: false
+    impact: 'HIGH'
+  - id: 'monitoring_infrastructure'
+    primary: false
+    impact: 'MEDIUM'
 
 metric_impacts:
   service_availability:

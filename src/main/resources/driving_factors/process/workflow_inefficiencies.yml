@@ -8,11 +8,17 @@ impact_areas:
   - 'Team coordination'
   - 'Process predictability'
   - 'Work efficiency'
-remediation_categories:
-  - 'Process standardization'
-  - 'Workflow automation'
-  - 'Tool integration'
-  - 'Documentation improvement'
+
+remediation_actions:
+  - id: 'workflow_optimization'
+    primary: true
+    impact: 'HIGH'
+  - id: 'process_automation_initiative'
+    primary: false
+    impact: 'MEDIUM'
+  - id: 'cicd_pipeline_enhancement'
+    primary: false
+    impact: 'MEDIUM'
 
 metric_impacts:
   lead_time_for_changes:

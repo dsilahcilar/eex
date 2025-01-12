@@ -1,3 +1,0 @@
-id: 'implement_ci'
-name: 'Implement Continuous Integration'
-description: 'Set up continuous integration pipelines to automatically build, test, and deploy code changes, reducing manual overhead and errors.' 

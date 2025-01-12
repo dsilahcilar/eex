@@ -8,11 +8,17 @@ impact_areas:
   - 'Release reliability'
   - 'Customer satisfaction'
   - 'Team confidence'
-remediation_categories:
-  - 'Quality gates'
-  - 'Review processes'
-  - 'Testing practices'
-  - 'Automation tools'
+
+remediation_actions:
+  - id: 'quality_assurance_framework'
+    primary: true
+    impact: 'HIGH'
+  - id: 'cicd_pipeline_enhancement'
+    primary: false
+    impact: 'MEDIUM'
+  - id: 'workflow_optimization'
+    primary: false
+    impact: 'LOW'
 
 metric_impacts:
   test_coverage:

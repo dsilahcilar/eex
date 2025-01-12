@@ -1,5 +1,0 @@
-id: 'add_test_coverage'
-name: 'Add Test Coverage'
-description: >
-  Increase the depth and breadth of automated tests
-  (unit, integration, end-to-end) to catch bugs earlier.
