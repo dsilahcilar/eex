@@ -1,0 +1,30 @@
+id: 'feedback_quantitative_metric'
+name: 'Feedback Response Time'
+description: 'Measures the time taken to receive responses for different types of questions and code reviews'
+type: 'quantitative'
+category: 'feedback'
+
+data_source:
+  - 'Code review system'
+  - 'Issue tracking system'
+  - 'Communication platforms'
+
+collection_method:
+  - 'Automated tracking of response times'
+  - 'System logs analysis'
+  - 'API integrations'
+
+calculation:
+  formula: 'Average response time across different feedback types'
+  frequency: 'Daily'
+  aggregation: 'Weekly average'
+
+thresholds:
+  optimal: '< 4 hours'
+  warning: '4-8 hours'
+  critical: '> 8 hours'
+
+related_metrics:
+  - 'code_review_completion_time'
+  - 'question_response_time'
+  - 'issue_resolution_time' 

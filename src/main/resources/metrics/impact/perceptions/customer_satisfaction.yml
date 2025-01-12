@@ -1,0 +1,30 @@
+id: 'customer_satisfaction'
+name: 'Customer Satisfaction'
+description: 'Measures the overall satisfaction level of customers with the software product and service'
+type: 'qualitative'
+category: 'impact'
+
+data_source:
+  - 'Customer surveys'
+  - 'Feedback forms'
+  - 'Support tickets'
+
+collection_method:
+  - 'Regular satisfaction surveys'
+  - 'Post-interaction feedback'
+  - 'Support ticket analysis'
+
+calculation:
+  formula: 'Average satisfaction score (1-5 scale)'
+  frequency: 'Monthly'
+  aggregation: 'Quarterly average'
+
+thresholds:
+  optimal: '≥ 4.5'
+  warning: '3.5-4.4'
+  critical: '< 3.5'
+
+related_metrics:
+  - 'service_availability'
+  - 'bug_resolution_time'
+  - 'feature_adoption_rate' 
