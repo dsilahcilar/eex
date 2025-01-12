@@ -1,0 +1,45 @@
+id: 'deployment_risk'
+name: 'Deployment Risk'
+description: 'Factors that increase the likelihood of deployment failures or service disruptions'
+type: 'process'
+subcategory: 'deployment_operations'
+impact_areas:
+  - 'Service reliability'
+  - 'Release confidence'
+  - 'Team productivity'
+  - 'Customer satisfaction'
+remediation_categories:
+  - 'Deployment automation'
+  - 'Testing enhancement'
+  - 'Rollback procedures'
+  - 'Monitoring improvement'
+
+metric_impacts:
+  deployment_frequency:
+    severity: 'HIGH'
+    description: 'Directly affects deployment confidence and cadence'
+  
+  change_failure_rate:
+    severity: 'HIGH'
+    description: 'Indicates deployment process reliability'
+  
+  deployment_process_ease:
+    severity: 'MEDIUM'
+    description: 'Reflects deployment process maturity'
+  
+  service_availability:
+    severity: 'MEDIUM'
+    description: 'Affects system stability during deployments'
+
+impact_indicators:
+  high_severity_signals:
+    - 'Frequent deployment failures'
+    - 'High rollback rates'
+    - 'Extended deployment times'
+    - 'Service disruptions during deployment'
+  
+  warning_signals:
+    - 'Increasing deployment complexity'
+    - 'Rising manual steps'
+    - 'Declining test coverage'
+    - 'Deployment schedule delays' 

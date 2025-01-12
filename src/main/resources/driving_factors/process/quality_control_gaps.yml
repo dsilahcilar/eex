@@ -1,0 +1,45 @@
+id: 'quality_control_gaps'
+name: 'Quality Control Gaps'
+description: 'Inadequate quality assurance processes and practices leading to defects and technical issues'
+type: 'process'
+subcategory: 'quality_assurance'
+impact_areas:
+  - 'Code quality'
+  - 'Release reliability'
+  - 'Customer satisfaction'
+  - 'Team confidence'
+remediation_categories:
+  - 'Quality gates'
+  - 'Review processes'
+  - 'Testing practices'
+  - 'Automation tools'
+
+metric_impacts:
+  test_coverage:
+    severity: 'HIGH'
+    description: 'Directly measures quality control effectiveness'
+  
+  change_failure_rate:
+    severity: 'HIGH'
+    description: 'Indicates quality control success rate'
+  
+  code_clarity_and_readability:
+    severity: 'MEDIUM'
+    description: 'Quality processes affect code standards'
+  
+  customer_satisfaction:
+    severity: 'MEDIUM'
+    description: 'Quality issues impact user experience'
+
+impact_indicators:
+  high_severity_signals:
+    - 'Rising defect rates'
+    - 'Failed quality gates'
+    - 'Customer complaints'
+    - 'Production issues'
+  
+  warning_signals:
+    - 'Declining test coverage'
+    - 'Review process gaps'
+    - 'Technical debt growth'
+    - 'Quality bypass requests' 

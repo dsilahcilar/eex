@@ -1,0 +1,49 @@
+id: 'code_complexity'
+name: 'Code Complexity'
+description: 'High cyclomatic complexity, poor code structure, and complicated logic patterns that impact maintainability and understanding'
+type: 'technical'
+subcategory: 'code_quality'
+impact_areas:
+  - 'Code maintainability'
+  - 'Development efficiency'
+  - 'Bug frequency'
+  - 'Onboarding difficulty'
+remediation_categories:
+  - 'Code refactoring'
+  - 'Design patterns implementation'
+  - 'Code review standards'
+  - 'Static analysis tools'
+
+metric_impacts:
+  code_clarity_and_readability:
+    severity: 'HIGH'
+    description: 'Directly affects code understanding and maintenance'
+  
+  lead_time_for_changes:
+    severity: 'HIGH'
+    description: 'Complex code takes longer to modify safely'
+  
+  change_failure_rate:
+    severity: 'MEDIUM'
+    description: 'Increases likelihood of bugs in changes'
+  
+  test_coverage:
+    severity: 'MEDIUM'
+    description: 'Makes comprehensive testing more difficult'
+  
+  developer_satisfaction:
+    severity: 'LOW'
+    description: 'Can frustrate developers but not primary factor'
+
+impact_indicators:
+  high_severity_signals:
+    - 'Cyclomatic complexity exceeds 15'
+    - 'Method length over 50 lines'
+    - 'Class coupling above threshold'
+    - 'Excessive inheritance depth'
+  
+  warning_signals:
+    - 'Increasing code churn in complex areas'
+    - 'Rising code review time'
+    - 'Test coverage declining'
+    - 'Increasing bug density' 

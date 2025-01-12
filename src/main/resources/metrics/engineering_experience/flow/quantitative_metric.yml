@@ -1,0 +1,21 @@
+id: 'context_switching_frequency'
+name: 'Context Switching Frequency'
+description: 'Measures how often developers need to switch between different tasks or projects during their workday'
+type: 'quantitative'
+drivingFactors:
+  - 'manual_process_overhead'
+  - 'unclear_requirements'
+relationships:
+  leadingIndicators:
+    - 'deep_work_satisfaction'
+  laggingIndicators:
+    - 'task_completion_rate'
+    - 'developer_satisfaction'
+
+measurement:
+  unit: 'switches_per_day'
+  collection_method: 'Automated tracking through IDE and task management integration'
+  thresholds:
+    good: '< 5'
+    warning: '5-10'
+    critical: '> 10'

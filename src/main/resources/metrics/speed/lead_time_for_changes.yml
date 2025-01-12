@@ -1,0 +1,65 @@
+id: 'lead_time_for_changes'
+name: 'Lead Time for Changes'
+description: 'Measures the time it takes for a commit to be deployed to production, indicating the efficiency of the development and delivery process'
+type: 'quantitative'
+drivingFactors:
+  - 'process_inconsistencies'
+  - 'manual_process_overhead'
+  - 'lack_of_automation'
+  - 'code_review_bottlenecks'
+relationships:
+  leadingIndicators:
+    - 'deployment_frequency'
+    - 'code_review_coverage'
+    - 'test_coverage'
+  laggingIndicators:
+    - 'time_to_market'
+    - 'developer_satisfaction'
+    - 'customer_satisfaction'
+
+measurement:
+  unit: 'hours'
+  collection_method: 'Automated tracking through version control and deployment systems'
+  thresholds:
+    elite: '< 1 hour'
+    high: '< 1 day'
+    medium: '1 day - 1 week'
+    low: '> 1 week'
+  
+  calculation: |
+    Lead Time = Time from commit to production deployment
+
+    Phases measured:
+    1. Code Review Time: Commit to PR approval
+    2. Build Time: PR merge to successful build
+    3. Test Time: Build completion to test completion
+    4. Deploy Time: Test completion to production deployment
+    
+    Total Lead Time = Sum of all phase durations
+    
+    Exclusions:
+    - Non-working hours
+    - Planned release holds
+    - External dependency delays
+  
+  data_sources:
+    - Version control system
+    - CI/CD pipeline metrics
+    - Code review system
+    - Release management tools
+    - Deployment logs
+    
+  benchmarks:
+    industry_standards: |
+      Based on DORA metrics:
+      - Elite: Less than one hour
+      - High: Less than one day
+      - Medium: Between one day and one week
+      - Low: Greater than one week
+    
+  optimization_targets:
+    - Code review process efficiency
+    - Automated testing speed
+    - Build pipeline optimization
+    - Deployment automation
+    - Environment provisioning 

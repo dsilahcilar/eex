@@ -1,0 +1,14 @@
+id: 'manual_process_overhead'
+name: 'Manual Process Overhead'
+description: 'Time and effort spent on manual, repetitive tasks that could be automated, leading to reduced productivity and increased error risk'
+type: 'process'
+impact_areas:
+  - 'Developer productivity'
+  - 'Deployment speed'
+  - 'Error prevention'
+  - 'Resource utilization'
+remediation_categories:
+  - 'Process automation'
+  - 'Tool integration'
+  - 'Workflow optimization'
+  - 'Infrastructure as code' 

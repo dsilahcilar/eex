@@ -1,0 +1,45 @@
+id: 'workflow_inefficiencies'
+name: 'Workflow Inefficiencies'
+description: 'Inefficient or inconsistent development and delivery processes that slow down work and create confusion'
+type: 'process'
+subcategory: 'development_workflow'
+impact_areas:
+  - 'Development speed'
+  - 'Team coordination'
+  - 'Process predictability'
+  - 'Work efficiency'
+remediation_categories:
+  - 'Process standardization'
+  - 'Workflow automation'
+  - 'Tool integration'
+  - 'Documentation improvement'
+
+metric_impacts:
+  lead_time_for_changes:
+    severity: 'HIGH'
+    description: 'Directly impacts development cycle time'
+  
+  deployment_frequency:
+    severity: 'HIGH'
+    description: 'Affects ability to deliver changes regularly'
+  
+  deep_work_satisfaction:
+    severity: 'MEDIUM'
+    description: 'Process inefficiencies disrupt flow state'
+  
+  work_engagement_level:
+    severity: 'MEDIUM'
+    description: 'Inefficient processes reduce work satisfaction'
+
+impact_indicators:
+  high_severity_signals:
+    - 'Extended cycle times'
+    - 'Process bottlenecks'
+    - 'Frequent work switching'
+    - 'Coordination delays'
+  
+  warning_signals:
+    - 'Increasing wait times'
+    - 'Process variations'
+    - 'Tool friction'
+    - 'Communication overhead' 

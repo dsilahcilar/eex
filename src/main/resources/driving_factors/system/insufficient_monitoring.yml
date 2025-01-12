@@ -1,0 +1,45 @@
+id: 'insufficient_monitoring'
+name: 'Insufficient Monitoring'
+description: 'Inadequate system observability and monitoring practices that impact incident detection and resolution'
+type: 'system'
+subcategory: 'observability'
+impact_areas:
+  - 'Incident detection'
+  - 'Problem resolution'
+  - 'System visibility'
+  - 'Performance tracking'
+remediation_categories:
+  - 'Monitoring implementation'
+  - 'Alerting enhancement'
+  - 'Logging improvements'
+  - 'Observability tools'
+
+metric_impacts:
+  service_availability:
+    severity: 'HIGH'
+    description: 'Directly affects ability to maintain service levels'
+  
+  change_failure_rate:
+    severity: 'HIGH'
+    description: 'Impacts ability to detect and prevent issues'
+  
+  system_complexity_perception:
+    severity: 'MEDIUM'
+    description: 'Affects understanding of system behavior'
+  
+  customer_satisfaction:
+    severity: 'MEDIUM'
+    description: 'Influences service quality perception'
+
+impact_indicators:
+  high_severity_signals:
+    - 'Missed incidents'
+    - 'Late problem detection'
+    - 'Unknown system states'
+    - 'Blind spots in coverage'
+  
+  warning_signals:
+    - 'Increasing false positives'
+    - 'Missing key metrics'
+    - 'Delayed alerts'
+    - 'Incomplete logging'

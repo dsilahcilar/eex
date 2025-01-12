@@ -1,0 +1,24 @@
+id: 'work_engagement_level'
+name: 'Work Engagement Level'
+description: 'Measures developers perception of work meaningfulness, challenge level, and overall engagement with their tasks'
+type: 'qualitative'
+drivingFactors:
+  - 'skill_development_needs'
+  - 'unclear_requirements'
+  - 'technical_debt_burden'
+relationships:
+  leadingIndicators:
+    - 'developer_satisfaction'
+    - 'deep_work_satisfaction'
+  laggingIndicators:
+    - 'team_retention'
+    - 'task_completion_rate'
+
+survey:
+  question: 'How engaging and meaningful do you find your current work tasks?'
+  options:
+    - 'Highly Engaging - Work is challenging, meaningful, and allows for growth'
+    - 'Engaging - Most tasks are interesting with good learning opportunities'
+    - 'Moderately Engaging - Mix of engaging work and routine tasks'
+    - 'Slightly Engaging - Work is mostly routine with few challenges'
+    - 'Not Engaging - Work is monotonous and lacks growth opportunities'

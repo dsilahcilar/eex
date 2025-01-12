@@ -1,0 +1,21 @@
+id: 'deep_work_satisfaction'
+name: 'Deep Work Satisfaction'
+description: 'Measures developers ability to achieve and maintain flow state during work'
+type: 'qualitative'
+drivingFactors:
+  - 'manual_process_overhead'
+  - 'development_environment_issues'
+relationships:
+  leadingIndicators:
+    - 'developer_satisfaction'
+  laggingIndicators:
+    - 'task_completion_rate'
+
+survey:
+  question: 'How often are you able to achieve uninterrupted focus time (2+ hours) for deep technical work?'
+  options:
+    - 'Very Often - Multiple times per day'
+    - 'Often - At least once per day'
+    - 'Sometimes - A few times per week'
+    - 'Rarely - Less than once per week'
+    - 'Never - Constant interruptions prevent deep work'

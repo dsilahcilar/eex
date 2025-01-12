@@ -1,0 +1,43 @@
+id: 'change_failure_rate'
+name: 'Change Failure Rate'
+description: 'Measures the percentage of deployments or changes that result in degraded service and require remediation (rollback, hotfix, etc.)'
+type: 'quantitative'
+drivingFactors:
+  - 'insufficient_test_coverage'
+  - 'lack_of_automation'
+  - 'unclear_requirements'
+  - 'code_quality_issues'
+  - 'system_reliability_issues'
+relationships:
+  leadingIndicators:
+    - 'test_coverage'
+    - 'code_review_coverage'
+    - 'deployment_process_ease'
+  laggingIndicators:
+    - 'mean_time_to_restore'
+    - 'customer_satisfaction'
+    - 'team_morale'
+
+measurement:
+  unit: 'percentage'
+  collection_method: 'Automated tracking through deployment and incident management systems'
+  thresholds:
+    good: '< 15%'
+    warning: '15-30%'
+    critical: '> 30%'
+  
+  calculation: |
+    (Number of failed changes / Total number of changes) * 100
+    
+    Where failed changes include:
+    - Deployments requiring immediate rollback
+    - Emergency hotfixes
+    - Production incidents caused by recent changes
+    - Service degradation requiring immediate intervention
+  
+  data_sources:
+    - Deployment logs
+    - Incident management system
+    - Version control system
+    - Monitoring alerts
+    - Production rollback records

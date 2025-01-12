@@ -1,0 +1,24 @@
+id: 'code_clarity_and_readability'
+name: 'Code Clarity and Readability'
+description: 'Measures developers perception of code readability, documentation quality, and overall clarity of the codebase'
+type: 'qualitative'
+drivingFactors:
+  - 'code_complexity'
+  - 'knowledge_sharing_gaps'
+  - 'technical_debt_burden'
+relationships:
+  leadingIndicators:
+    - 'code_review_time'
+    - 'developer_satisfaction'
+  laggingIndicators:
+    - 'defect_density'
+    - 'onboarding_time'
+
+survey:
+  question: 'How would you rate the clarity and readability of the codebase you work with most frequently?'
+  options:
+    - 'Excellent - Code is self-documenting, well-organized, and easy to understand'
+    - 'Good - Most code is clear with good documentation, minor clarity issues'
+    - 'Fair - Code is understandable but requires significant effort to follow'
+    - 'Poor - Code is often unclear, poorly documented, or hard to follow'
+    - 'Very Poor - Code is consistently difficult to understand and lacks proper documentation'

@@ -1,0 +1,23 @@
+id: 'external_stakeholder_communication'
+name: 'External Stakeholder Communication'
+description: 'Measures the clarity and effectiveness of communication with external stakeholders (product owners, business teams, customers)'
+type: 'qualitative'
+drivingFactors:
+  - 'unclear_requirements'
+  - 'process_inconsistencies'
+relationships:
+  leadingIndicators:
+    - 'requirements_clarity'
+  laggingIndicators:
+    - 'sprint_completion_rate'
+    - 'customer_satisfaction'
+
+survey:
+  question: 'How would you rate the clarity and timeliness of communication with external stakeholders (product owners, business teams, customers)?'
+  options:
+    - 'Excellent - Clear, timely, and productive communication'
+    - 'Good - Generally clear with occasional misunderstandings'
+    - 'Fair - Regular clarity issues but manageable'
+    - 'Poor - Frequent misunderstandings and delays'
+    - 'Very Poor - Consistent communication problems impacting work'
+

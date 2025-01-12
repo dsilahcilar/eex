@@ -1,0 +1,45 @@
+id: 'knowledge_sharing_gaps'
+name: 'Knowledge Sharing Gaps'
+description: 'Ineffective knowledge transfer and documentation practices that impact team capability and efficiency'
+type: 'cultural'
+subcategory: 'collaboration'
+impact_areas:
+  - 'Team capability'
+  - 'Onboarding efficiency'
+  - 'Development speed'
+  - 'Code quality'
+remediation_categories:
+  - 'Documentation practices'
+  - 'Mentoring programs'
+  - 'Knowledge base creation'
+  - 'Pair programming'
+
+metric_impacts:
+  code_clarity_and_readability:
+    severity: 'HIGH'
+    description: 'Affects code understanding and documentation quality'
+  
+  system_complexity_perception:
+    severity: 'HIGH'
+    description: 'Impacts ability to understand system architecture'
+  
+  lead_time_for_changes:
+    severity: 'MEDIUM'
+    description: 'Affects time needed to implement changes'
+  
+  work_engagement_level:
+    severity: 'MEDIUM'
+    description: 'Influences team collaboration and learning opportunities'
+
+impact_indicators:
+  high_severity_signals:
+    - 'Documentation significantly outdated'
+    - 'Knowledge silos forming'
+    - 'Extended onboarding times'
+    - 'Repeated similar questions'
+  
+  warning_signals:
+    - 'Increasing dependency on specific team members'
+    - 'Declining documentation updates'
+    - 'Reduced cross-team collaboration'
+    - 'Rising questions in common areas' 

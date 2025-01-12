@@ -1,0 +1,45 @@
+id: 'insufficient_test_coverage'
+name: 'Insufficient Test Coverage'
+description: 'Inadequate automated testing across different levels leading to reduced confidence in changes and increased risk'
+type: 'technical'
+subcategory: 'testing'
+impact_areas:
+  - 'Change confidence'
+  - 'Code quality'
+  - 'Release reliability'
+  - 'Development speed'
+remediation_categories:
+  - 'Test automation'
+  - 'Coverage analysis'
+  - 'Testing strategy'
+  - 'CI/CD integration'
+
+metric_impacts:
+  test_coverage:
+    severity: 'HIGH'
+    description: 'Direct measure of testing adequacy'
+  
+  change_failure_rate:
+    severity: 'HIGH'
+    description: 'Affects reliability of changes'
+  
+  deployment_frequency:
+    severity: 'MEDIUM'
+    description: 'Impacts confidence to deploy'
+  
+  service_availability:
+    severity: 'MEDIUM'
+    description: 'Affects system stability through defect prevention'
+
+impact_indicators:
+  high_severity_signals:
+    - 'Coverage below threshold'
+    - 'Missing critical tests'
+    - 'Production bugs in untested areas'
+    - 'Manual testing bottlenecks'
+  
+  warning_signals:
+    - 'Declining coverage trends'
+    - 'Skipped test creation'
+    - 'Test maintenance issues'
+    - 'Increasing manual testing'

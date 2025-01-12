@@ -1,0 +1,15 @@
+id: 'technical_debt'
+name: 'Technical Debt'
+description: 'Accumulated design and implementation compromises that require future rework and impact development velocity'
+type: 'technical'
+subcategory: 'code_quality'
+impact_areas:
+  - 'Development speed'
+  - 'System maintainability'
+  - 'Architecture flexibility'
+  - 'Innovation capacity'
+remediation_categories:
+  - 'Debt assessment and tracking'
+  - 'Systematic refactoring'
+  - 'Architecture modernization'
+  - 'Technical upgrade initiatives' 

@@ -1,0 +1,21 @@
+id: 'internal_communication_effectiveness'
+name: 'Internal Communication Effectiveness'
+description: 'Measures the effectiveness of internal team communication and information flow'
+type: 'qualitative'
+drivingFactors:
+  - 'team_collaboration_issues'
+  - 'knowledge_sharing_gaps'
+relationships:
+  leadingIndicators:
+    - 'team_collaboration_score'
+  laggingIndicators:
+    - 'sprint_completion_rate'
+
+survey:
+  question: 'How would you rate the effectiveness of internal team communication in getting the information you need to do your work?'
+  options:
+    - 'Excellent - Communication is clear and efficient'
+    - 'Good - Minor communication gaps occasionally'
+    - 'Fair - Some regular communication challenges'
+    - 'Poor - Frequent communication breakdowns'
+    - 'Very Poor - Significant communication barriers'

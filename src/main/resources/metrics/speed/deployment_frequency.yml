@@ -1,0 +1,55 @@
+id: 'deployment_frequency'
+name: 'Deployment Frequency'
+description: 'Measures how often the organization successfully deploys code to production, indicating the ability to deliver changes quickly and reliably'
+type: 'quantitative'
+drivingFactors:
+  - 'lack_of_automation'
+  - 'process_inconsistencies'
+  - 'manual_process_overhead'
+  - 'insufficient_test_coverage'
+relationships:
+  leadingIndicators:
+    - 'test_coverage'
+    - 'deployment_process_ease'
+  laggingIndicators:
+    - 'change_failure_rate'
+    - 'developer_satisfaction'
+    - 'time_to_market'
+
+measurement:
+  unit: 'deployments per time period'
+  collection_method: 'Automated tracking through CI/CD pipeline and deployment tools'
+  thresholds:
+    elite: 'Multiple deploys per day'
+    high: 'Between once per day and once per week'
+    medium: 'Between once per week and once per month'
+    low: 'Less than once per month'
+  
+  calculation: |
+    Frequency = Number of successful deployments / Time period
+
+    Measured across different environments:
+    - Production deployments
+    - Staging deployments
+    - Feature deployments
+    
+    Success criteria:
+    - Deployment completes without failures
+    - No immediate rollbacks needed
+    - Passes post-deployment health checks
+    - Meets defined SLO criteria
+  
+  data_sources:
+    - CI/CD pipeline logs
+    - Deployment automation tools
+    - Version control system
+    - Release management system
+    - Environment status tracking
+    
+  benchmarks:
+    industry_standards: |
+      Based on DORA metrics:
+      - Elite: Multiple deploys per day
+      - High: Between once per day and once per week
+      - Medium: Between once per week and once per month
+      - Low: Less than once per month 

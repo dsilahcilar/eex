@@ -1,0 +1,45 @@
+id: 'knowledge_gaps'
+name: 'Knowledge Gaps'
+description: 'Gaps in technical knowledge, domain understanding, and best practices that impact team effectiveness'
+type: 'cultural'
+subcategory: 'team_capability'
+impact_areas:
+  - 'Technical expertise'
+  - 'Decision quality'
+  - 'Innovation ability'
+  - 'Team autonomy'
+remediation_categories:
+  - 'Training programs'
+  - 'Knowledge sharing'
+  - 'Documentation systems'
+  - 'Mentorship initiatives'
+
+metric_impacts:
+  deep_work_satisfaction:
+    severity: 'HIGH'
+    description: 'Knowledge gaps create uncertainty and reduce confidence'
+  
+  code_clarity_and_readability:
+    severity: 'HIGH'
+    description: 'Limited knowledge affects code quality and standards'
+  
+  change_failure_rate:
+    severity: 'MEDIUM'
+    description: 'Knowledge gaps can lead to implementation errors'
+  
+  test_coverage:
+    severity: 'MEDIUM'
+    description: 'Understanding gaps affect testing effectiveness'
+
+impact_indicators:
+  high_severity_signals:
+    - 'Implementation errors'
+    - 'Documentation confusion'
+    - 'Repeated mistakes'
+    - 'Decision delays'
+  
+  warning_signals:
+    - 'Growing technical debt'
+    - 'Knowledge silos'
+    - 'Inconsistent practices'
+    - 'Learning curve issues' 

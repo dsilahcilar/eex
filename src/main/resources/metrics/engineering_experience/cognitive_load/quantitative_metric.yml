@@ -1,0 +1,21 @@
+id: 'code_cognitive_complexity'
+name: 'Code Cognitive Complexity'
+description: 'Quantitative measure of cognitive complexity in code based on cyclomatic complexity, nesting levels, and code structure'
+type: 'quantitative'
+drivingFactors:
+  - 'code_complexity'
+  - 'technical_debt_burden'
+relationships:
+  leadingIndicators:
+    - 'system_complexity_perception'
+  laggingIndicators:
+    - 'defect_density'
+    - 'code_review_time'
+
+measurement:
+  unit: 'complexity_score'
+  collection_method: 'Static code analysis tools measuring cognitive complexity metrics'
+  thresholds:
+    good: '< 15'
+    warning: '15-30'
+    critical: '> 30'

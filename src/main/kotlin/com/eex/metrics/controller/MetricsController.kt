@@ -28,7 +28,7 @@ class MetricsController(private val metricsService: MetricsService) {
             content = [Content(mediaType = "application/json", schema = Schema(implementation = Metric::class))]),
         ApiResponse(responseCode = "404", description = "Metric not found")
     )
-    @GetMapping("/metrics/{id}")
+    @GetMapping("/metrics_old/{id}")
     fun getMetric(
         @Parameter(description = "ID of the metric to retrieve")
         @PathVariable id: String
@@ -44,7 +44,7 @@ class MetricsController(private val metricsService: MetricsService) {
     )
     @ApiResponse(responseCode = "200", description = "List of metrics retrieved successfully",
         content = [Content(mediaType = "application/json", schema = Schema(implementation = Array<Metric>::class))])
-    @GetMapping("/metrics")
+    @GetMapping("/metrics_old")
     fun getAllMetrics(): ResponseEntity<List<Metric>> {
         return ResponseEntity.ok(metricsService.getAllMetrics())
     }

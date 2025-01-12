@@ -1,0 +1,45 @@
+id: 'service_integration_issues'
+name: 'Service Integration Issues'
+description: 'Problems with service interactions, dependencies, and integration points that affect system reliability'
+type: 'system'
+subcategory: 'integration'
+impact_areas:
+  - 'System reliability'
+  - 'Service dependencies'
+  - 'Data consistency'
+  - 'Performance'
+remediation_categories:
+  - 'API standardization'
+  - 'Integration testing'
+  - 'Service contracts'
+  - 'Dependency management'
+
+metric_impacts:
+  service_availability:
+    severity: 'HIGH'
+    description: 'Directly affects system uptime and reliability'
+  
+  change_failure_rate:
+    severity: 'HIGH'
+    description: 'Impacts service interaction success'
+  
+  deployment_frequency:
+    severity: 'MEDIUM'
+    description: 'Affects deployment confidence and cadence'
+  
+  customer_satisfaction:
+    severity: 'MEDIUM'
+    description: 'Influences overall service quality perception'
+
+impact_indicators:
+  high_severity_signals:
+    - 'Integration failures'
+    - 'Service timeouts'
+    - 'Data inconsistencies'
+    - 'Cascading failures'
+  
+  warning_signals:
+    - 'Increasing latency'
+    - 'API version conflicts'
+    - 'Connection issues'
+    - 'Contract violations' 

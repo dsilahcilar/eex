@@ -1,0 +1,24 @@
+id: 'deployment_process_ease'
+name: 'Deployment Process Ease'
+description: 'Measures developers perception of deployment process complexity, reliability, and cognitive load associated with releases'
+type: 'qualitative'
+drivingFactors:
+  - 'system_reliability_issues'
+  - 'process_inconsistencies'
+  - 'manual_process_overhead'
+relationships:
+  leadingIndicators:
+    - 'deployment_frequency'
+    - 'developer_satisfaction'
+  laggingIndicators:
+    - 'mean_time_to_recovery'
+    - 'change_failure_rate'
+
+survey:
+  question: 'How would you rate the ease and reliability of the deployment process?'
+  options:
+    - 'Very Easy - Deployments are automated, reliable, and require minimal cognitive effort'
+    - 'Easy - Deployments are mostly smooth with occasional minor issues'
+    - 'Moderate - Deployments require significant attention but are manageable'
+    - 'Difficult - Deployments are complex and often cause stress'
+    - 'Very Difficult - Deployments are highly complex and frequently problematic'

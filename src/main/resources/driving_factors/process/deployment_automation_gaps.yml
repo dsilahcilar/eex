@@ -1,0 +1,45 @@
+id: 'deployment_automation_gaps'
+name: 'Deployment Automation Gaps'
+description: 'Missing or incomplete automation in deployment and release processes leading to manual overhead and errors'
+type: 'process'
+subcategory: 'deployment_operations'
+impact_areas:
+  - 'Deployment efficiency'
+  - 'Release reliability'
+  - 'Team productivity'
+  - 'Process consistency'
+remediation_categories:
+  - 'CI/CD automation'
+  - 'Pipeline optimization'
+  - 'Infrastructure as code'
+  - 'Release automation'
+
+metric_impacts:
+  deployment_frequency:
+    severity: 'HIGH'
+    description: 'Directly affects ability to deploy regularly'
+  
+  deployment_process_ease:
+    severity: 'HIGH'
+    description: 'Manual processes increase deployment complexity'
+  
+  change_failure_rate:
+    severity: 'MEDIUM'
+    description: 'Manual steps increase error risk'
+  
+  deep_work_satisfaction:
+    severity: 'MEDIUM'
+    description: 'Manual overhead disrupts development flow'
+
+impact_indicators:
+  high_severity_signals:
+    - 'Low deployment frequency'
+    - 'High manual effort'
+    - 'Deployment errors'
+    - 'Process inconsistencies'
+  
+  warning_signals:
+    - 'Growing deployment time'
+    - 'Manual intervention needs'
+    - 'Configuration drift'
+    - 'Documentation gaps' 

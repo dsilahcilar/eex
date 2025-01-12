@@ -1,0 +1,22 @@
+id: 'technical_question_response_time'
+name: 'Technical Question Response Time'
+description: 'Measures how quickly developers can get answers to technical questions, indicating knowledge sharing effectiveness and team collaboration'
+type: 'qualitative'
+drivingFactors:
+  - 'knowledge_sharing_gaps'
+  - 'team_collaboration_issues'
+relationships:
+  leadingIndicators:
+    - 'team_collaboration_score'
+  laggingIndicators:
+    - 'developer_satisfaction'
+
+survey:
+  question: 'How often does it take more than 10 minutes to obtain an answer to an internal technical question (i.e., about code, a system, or the library/service you are using)?'
+  options:
+    - 'Never - I always get quick responses'
+    - 'Rarely - Less than once a week'
+    - 'Sometimes - A few times a week'
+    - 'Often - Almost daily'
+    - 'Very Often - Multiple times per day'
+

@@ -1,0 +1,45 @@
+id: 'developer_experience_issues'
+name: 'Developer Experience Issues'
+description: 'Challenges and friction points in the development environment that impact developer productivity and satisfaction'
+type: 'cultural'
+subcategory: 'developer_satisfaction'
+impact_areas:
+  - 'Developer productivity'
+  - 'Team morale'
+  - 'Code quality'
+  - 'Innovation capacity'
+remediation_categories:
+  - 'Tool optimization'
+  - 'Environment improvements'
+  - 'Process streamlining'
+  - 'Developer enablement'
+
+metric_impacts:
+  deep_work_satisfaction:
+    severity: 'HIGH'
+    description: 'Poor developer experience directly impacts work satisfaction'
+  
+  work_engagement_level:
+    severity: 'HIGH'
+    description: 'Environment issues reduce engagement and motivation'
+  
+  deployment_process_ease:
+    severity: 'MEDIUM'
+    description: 'Development friction affects deployment confidence'
+  
+  code_clarity_and_readability:
+    severity: 'MEDIUM'
+    description: 'Environment issues can impact code quality'
+
+impact_indicators:
+  high_severity_signals:
+    - 'Developer complaints'
+    - 'Tool friction reports'
+    - 'Environment setup issues'
+    - 'Productivity blockers'
+  
+  warning_signals:
+    - 'Increasing setup time'
+    - 'Tool adoption resistance'
+    - 'Environment inconsistencies'
+    - 'Development workflow breaks' 

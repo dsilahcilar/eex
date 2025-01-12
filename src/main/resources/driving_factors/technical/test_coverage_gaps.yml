@@ -1,0 +1,15 @@
+id: 'test_coverage_gaps'
+name: 'Test Coverage Gaps'
+description: 'Insufficient automated testing across different testing levels (unit, integration, end-to-end) leading to reduced confidence in changes'
+type: 'technical'
+subcategory: 'testing'
+impact_areas:
+  - 'Change confidence'
+  - 'Regression detection'
+  - 'Release reliability'
+  - 'Development speed'
+remediation_categories:
+  - 'Test automation'
+  - 'Coverage analysis'
+  - 'Testing strategy'
+  - 'CI/CD integration' 

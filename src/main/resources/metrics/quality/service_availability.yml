@@ -1,0 +1,58 @@
+id: 'service_availability'
+name: 'Service Availability'
+description: 'Measures the percentage of time the service is available and functioning correctly, based on SLI/SLO principles from Site Reliability Engineering'
+type: 'quantitative'
+drivingFactors:
+  - 'system_reliability_issues'
+  - 'insufficient_monitoring'
+  - 'technical_debt_burden'
+  - 'lack_of_automation'
+relationships:
+  leadingIndicators:
+    - 'deployment_process_ease'
+    - 'test_coverage'
+    - 'change_failure_rate'
+  laggingIndicators:
+    - 'customer_satisfaction'
+    - 'business_value_delivery'
+    - 'team_morale'
+
+measurement:
+  unit: 'percentage'
+  collection_method: 'Automated monitoring and alerting systems tracking service health'
+  thresholds:
+    good: '> 99.9%'  # Less than 8.76 hours downtime per year
+    warning: '99.0-99.9%'  # Between 8.76 and 87.6 hours downtime per year
+    critical: '< 99.0%'  # More than 87.6 hours downtime per year
+  
+  calculation: |
+    Availability = (Total Uptime / Total Time Period) * 100
+
+    Where service is considered "down" if any of:
+    - Service is completely unavailable
+    - Error rate exceeds 0.1% of requests
+    - Latency P95 exceeds defined SLO
+    - Critical business functions are impaired
+    
+    Monthly calculation example:
+    - Total minutes in month: 43,200 (30 days)
+    - Total downtime minutes: 43
+    - Availability = (43,157 / 43,200) * 100 = 99.9%
+  
+  data_sources:
+    - System monitoring tools
+    - Load balancer logs
+    - Application performance monitoring
+    - Error tracking systems
+    - User-reported incidents
+    - Synthetic monitoring results
+    - Health check endpoints
+
+  error_budget:
+    policy: |
+      - Monthly error budget: 0.1% (43.2 minutes)
+      - If error budget is exhausted:
+        1. Freeze non-critical deployments
+        2. Prioritize reliability improvements
+        3. Review and update runbooks
+        4. Conduct incident retrospectives 

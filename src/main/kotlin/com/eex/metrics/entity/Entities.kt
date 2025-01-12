@@ -3,7 +3,7 @@ package com.eex.metrics.entity
 import jakarta.persistence.*
 
 @Entity
-@Table(name = "metrics")
+@Table(name = "metrics_old")
 class MetricEntity(
     @Id
     val id: String,

@@ -1,0 +1,45 @@
+id: 'performance_bottlenecks'
+name: 'Performance Bottlenecks'
+description: 'System performance issues that impact response times, throughput, and resource utilization'
+type: 'system'
+subcategory: 'performance'
+impact_areas:
+  - 'System performance'
+  - 'User experience'
+  - 'Resource efficiency'
+  - 'Service quality'
+remediation_categories:
+  - 'Performance optimization'
+  - 'Resource management'
+  - 'Scaling improvements'
+  - 'Caching strategies'
+
+metric_impacts:
+  service_availability:
+    severity: 'HIGH'
+    description: 'Directly affects system performance and availability'
+  
+  customer_satisfaction:
+    severity: 'HIGH'
+    description: 'Performance issues directly impact user experience'
+  
+  deployment_frequency:
+    severity: 'MEDIUM'
+    description: 'May require more careful deployment planning'
+  
+  system_complexity_perception:
+    severity: 'MEDIUM'
+    description: 'Performance issues often indicate architectural problems'
+
+impact_indicators:
+  high_severity_signals:
+    - 'Response time degradation'
+    - 'Resource exhaustion'
+    - 'Throughput bottlenecks'
+    - 'Scaling limitations'
+  
+  warning_signals:
+    - 'Increasing latency trends'
+    - 'Growing resource usage'
+    - 'Cache hit ratio declining'
+    - 'Performance regressions' 

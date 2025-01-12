@@ -1,0 +1,45 @@
+id: 'unclear_requirements'
+name: 'Unclear Requirements'
+description: 'Insufficient or ambiguous requirements that lead to misaligned deliverables and rework'
+type: 'organizational'
+subcategory: 'communication'
+impact_areas:
+  - 'Development efficiency'
+  - 'Product quality'
+  - 'Team alignment'
+  - 'Delivery timeline'
+remediation_categories:
+  - 'Requirements refinement'
+  - 'Stakeholder engagement'
+  - 'Documentation standards'
+  - 'Review processes'
+
+metric_impacts:
+  lead_time_for_changes:
+    severity: 'HIGH'
+    description: 'Increases time spent on clarification and rework'
+  
+  change_failure_rate:
+    severity: 'HIGH'
+    description: 'Leads to misaligned implementations'
+  
+  customer_satisfaction:
+    severity: 'MEDIUM'
+    description: 'Affects alignment with customer needs'
+  
+  time_spent_on_strategic_initiatives:
+    severity: 'MEDIUM'
+    description: 'Reduces time available for planned work'
+
+impact_indicators:
+  high_severity_signals:
+    - 'Frequent requirement changes'
+    - 'High rework rates'
+    - 'Misaligned deliverables'
+    - 'Extended clarification cycles'
+  
+  warning_signals:
+    - 'Increasing questions during development'
+    - 'Rising scope changes'
+    - 'Delayed feature starts'
+    - 'Inconsistent interpretations' 

@@ -1,0 +1,59 @@
+id: 'reliability_issues'
+name: 'Reliability Issues'
+description: 'System stability and availability problems that affect service quality and user experience'
+type: 'system'
+subcategory: 'reliability'
+impact_areas:
+  - 'System availability'
+  - 'Service quality'
+  - 'User satisfaction'
+  - 'Business continuity'
+remediation_categories:
+  - 'Resilience engineering'
+  - 'Error handling'
+  - 'Monitoring enhancement'
+  - 'SLO implementation'
+
+metric_impacts:
+  service_availability:
+    severity: 'HIGH'
+    description: 'Direct impact on system uptime and availability'
+  
+  customer_satisfaction:
+    severity: 'HIGH'
+    description: 'Service disruptions severely affect user experience'
+  
+  change_failure_rate:
+    severity: 'MEDIUM'
+    description: 'Can indicate systemic reliability issues'
+  
+  deployment_frequency:
+    severity: 'MEDIUM'
+    description: 'May lead to more cautious deployment patterns'
+  
+  developer_satisfaction:
+    severity: 'LOW'
+    description: 'Affects team morale through incident handling'
+
+impact_indicators:
+  high_severity_signals:
+    - 'SLO breaches'
+    - 'Increasing error rates'
+    - 'Service outages'
+    - 'Critical customer impact'
+  
+  warning_signals:
+    - 'Rising latency trends'
+    - 'Increasing incident frequency'
+    - 'Resource utilization spikes'
+    - 'Error budget depletion'
+
+measurement_thresholds:
+  critical:
+    - 'Availability below 99.9%'
+    - 'Error rate above 0.1%'
+    - 'P95 latency above SLO'
+  warning:
+    - 'Error budget burn rate > 2x'
+    - 'Increasing error trends'
+    - 'Performance degradation' 

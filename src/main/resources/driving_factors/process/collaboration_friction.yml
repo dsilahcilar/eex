@@ -1,0 +1,45 @@
+id: 'collaboration_friction'
+name: 'Collaboration Friction'
+description: 'Barriers and inefficiencies in team collaboration that impact development flow and communication effectiveness'
+type: 'process'
+subcategory: 'team_collaboration'
+impact_areas:
+  - 'Team productivity'
+  - 'Knowledge sharing'
+  - 'Development flow'
+  - 'Cross-team coordination'
+remediation_categories:
+  - 'Communication tools'
+  - 'Collaboration practices'
+  - 'Team processes'
+  - 'Documentation systems'
+
+metric_impacts:
+  deep_work_satisfaction:
+    severity: 'HIGH'
+    description: 'Collaboration issues directly disrupt focused work'
+  
+  work_engagement_level:
+    severity: 'HIGH'
+    description: 'Team friction reduces work satisfaction and engagement'
+  
+  lead_time_for_changes:
+    severity: 'MEDIUM'
+    description: 'Communication barriers slow down development cycles'
+  
+  deployment_process_ease:
+    severity: 'MEDIUM'
+    description: 'Team friction complicates deployment coordination'
+
+impact_indicators:
+  high_severity_signals:
+    - 'Communication breakdowns'
+    - 'Knowledge silos'
+    - 'Delayed responses'
+    - 'Meeting overload'
+  
+  warning_signals:
+    - 'Increasing coordination overhead'
+    - 'Documentation gaps'
+    - 'Tool fragmentation'
+    - 'Feedback delays' 

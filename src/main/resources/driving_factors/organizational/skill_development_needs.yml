@@ -1,0 +1,45 @@
+id: 'skill_development_needs'
+name: 'Skill Development Needs'
+description: 'Gaps in technical skills and expertise that affect team performance and growth potential'
+type: 'organizational'
+subcategory: 'training_development'
+impact_areas:
+  - 'Team capability'
+  - 'Innovation potential'
+  - 'Technical quality'
+  - 'Career growth'
+remediation_categories:
+  - 'Training programs'
+  - 'Technical workshops'
+  - 'Career development'
+  - 'Learning resources'
+
+metric_impacts:
+  system_complexity_perception:
+    severity: 'HIGH'
+    description: 'Affects ability to understand and work with complex systems'
+  
+  code_clarity_and_readability:
+    severity: 'HIGH'
+    description: 'Impacts ability to write and maintain quality code'
+  
+  time_spent_on_strategic_initiatives:
+    severity: 'MEDIUM'
+    description: 'Influences capacity for innovation and improvement'
+  
+  work_engagement_level:
+    severity: 'MEDIUM'
+    description: 'Affects job satisfaction and growth opportunities'
+
+impact_indicators:
+  high_severity_signals:
+    - 'Technical debt accumulation'
+    - 'Delayed feature delivery'
+    - 'Quality issues in deliverables'
+    - 'Limited technology adoption'
+  
+  warning_signals:
+    - 'Increasing external dependencies'
+    - 'Resistance to new technologies'
+    - 'Declining innovation proposals'
+    - 'Rising support needs' 
