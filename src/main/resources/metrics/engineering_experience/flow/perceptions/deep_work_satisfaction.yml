@@ -8,6 +8,10 @@ categories:
 drivingFactors:
   - 'manual_process_overhead'
   - 'development_environment_issues'
+  - 'collaboration_friction'
+  - 'workflow_inefficiencies'
+  - 'knowledge_sharing_gaps'
+  - 'unclear_requirements'
 relationships:
   leadingIndicators:
     - 'developer_satisfaction'
