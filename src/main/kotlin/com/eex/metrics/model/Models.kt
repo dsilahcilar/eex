@@ -30,10 +30,10 @@ data class Metric(
 @Schema(description = "Metric relationships information")
 data class MetricRelationships(
     @Schema(description = "List of metrics that are leading indicators for this metric")
-    val leadingIndicators: List<String>,
+    val leadingIndicators: List<String> = emptyList(),
 
     @Schema(description = "List of metrics that are lagging indicators for this metric")
-    val laggingIndicators: List<String>
+    val laggingIndicators: List<String> = emptyList()
 )
 
 @Schema(description = "Driving factor information")
@@ -126,7 +126,7 @@ data class RemediationActionLink(
     val remediationActionId: String,
 
     @Schema(description = "Whether this is a primary remediation action")
-    val primary: Boolean,
+    val isPrimary: Boolean,
 
     @Schema(description = "Impact level of this remediation action")
     val impact: ImpactLevel

@@ -96,7 +96,8 @@ class DrivingFactorRemediationActionLink(
     
     val remediationActionId: String,
     
-    val primary: Boolean,
+    @Column(name = "is_primary")
+    val isPrimary: Boolean,
     
     @Enumerated(EnumType.STRING)
     val impact: ImpactLevel

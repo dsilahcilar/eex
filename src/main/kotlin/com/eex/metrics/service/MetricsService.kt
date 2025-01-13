@@ -99,7 +99,7 @@ class MetricsService(
                 remediationActionLinks = entity.remediationActionLinks.map { link ->
                     RemediationActionLink(
                         remediationActionId = link.remediationActionId,
-                        primary = link.primary,
+                        isPrimary = link.isPrimary,
                         impact = link.impact
                     )
                 }
@@ -120,7 +120,7 @@ class MetricsService(
                 remediationActionLinks = entity.remediationActionLinks.map { link ->
                     RemediationActionLink(
                         remediationActionId = link.remediationActionId,
-                        primary = link.primary,
+                        isPrimary = link.isPrimary,
                         impact = link.impact
                     )
                 }
