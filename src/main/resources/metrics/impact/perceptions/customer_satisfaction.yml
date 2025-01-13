@@ -2,8 +2,8 @@ id: 'customer_satisfaction'
 name: 'Customer Satisfaction'
 description: 'Measures the overall satisfaction level of customers with the software product and service'
 type: 'qualitative'
-category: 'impact'
-
+categories:
+  - 'impact'
 data_source:
   - 'Customer surveys'
   - 'Feedback forms'

@@ -2,6 +2,8 @@ id: 'deployment_frequency'
 name: 'Deployment Frequency'
 description: 'Measures how often the organization successfully deploys code to production, indicating the ability to deliver changes quickly and reliably'
 type: 'quantitative'
+categories:
+  - 'speed'
 drivingFactors:
   - 'lack_of_automation'
   - 'process_inconsistencies'

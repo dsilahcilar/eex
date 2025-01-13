@@ -2,6 +2,8 @@ id: 'service_availability'
 name: 'Service Availability'
 description: 'Measures the percentage of time the service is available and functioning correctly, based on SLI/SLO principles from Site Reliability Engineering'
 type: 'quantitative'
+categories:
+  - 'quality'
 drivingFactors:
   - 'system_reliability_issues'
   - 'insufficient_monitoring'

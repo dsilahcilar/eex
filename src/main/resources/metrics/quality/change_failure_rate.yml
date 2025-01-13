@@ -2,6 +2,8 @@ id: 'change_failure_rate'
 name: 'Change Failure Rate'
 description: 'Measures the percentage of deployments or changes that result in degraded service and require remediation (rollback, hotfix, etc.)'
 type: 'quantitative'
+categories:
+  - 'quality'
 drivingFactors:
   - 'insufficient_test_coverage'
   - 'lack_of_automation'

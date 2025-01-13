@@ -2,6 +2,8 @@ id: 'lead_time_for_changes'
 name: 'Lead Time for Changes'
 description: 'Measures the time it takes for a commit to be deployed to production, indicating the efficiency of the development and delivery process'
 type: 'quantitative'
+categories:
+  - 'speed'
 drivingFactors:
   - 'process_inconsistencies'
   - 'manual_process_overhead'

@@ -1,17 +1,12 @@
 package com.eex.metrics.service
 
-import com.eex.metrics.entity.DrivingFactorEntity
-import com.eex.metrics.entity.MetricEntity
-import com.eex.metrics.entity.MetricRelationshipsEntity
-import com.eex.metrics.entity.RemediationActionEntity
-import com.eex.metrics.model.DrivingFactor
-import com.eex.metrics.model.Metric
-import com.eex.metrics.model.MetricRelationships
-import com.eex.metrics.model.RemediationAction
+import com.eex.metrics.entity.*
+import com.eex.metrics.model.*
 import com.eex.metrics.repository.DrivingFactorRepository
 import com.eex.metrics.repository.MetricRepository
 import com.eex.metrics.repository.RemediationActionRepository
 import com.fasterxml.jackson.databind.ObjectMapper
+import com.fasterxml.jackson.databind.DeserializationFeature
 import com.fasterxml.jackson.dataformat.yaml.YAMLFactory
 import com.fasterxml.jackson.module.kotlin.KotlinModule
 import com.fasterxml.jackson.module.kotlin.readValue
@@ -26,7 +21,11 @@ class YamlService(
     private val drivingFactorRepository: DrivingFactorRepository,
     private val remediationActionRepository: RemediationActionRepository
 ) {
-    private val yamlMapper = ObjectMapper(YAMLFactory()).registerModule(KotlinModule.Builder().build())
+    private val yamlMapper = ObjectMapper(YAMLFactory())
+        .registerModule(KotlinModule.Builder().build())
+        .configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false)
+        .configure(DeserializationFeature.READ_ENUMS_USING_TO_STRING, true)
+        .configure(DeserializationFeature.READ_UNKNOWN_ENUM_VALUES_AS_NULL, true)
     private val resourceResolver = PathMatchingResourcePatternResolver()
 
     @Transactional
@@ -94,8 +93,17 @@ class YamlService(
                 id = entity.id,
                 name = entity.name,
                 description = entity.description,
+                type = entity.type,
+                subcategory = entity.subcategory,
+                impactAreas = entity.impactAreas.toList(),
                 metricsImpacted = entity.metrics.map { it.id },
-                remediationActions = entity.remediationActions.map { it.id }
+                remediationActionLinks = entity.remediationActionLinks.map { link ->
+                    RemediationActionLink(
+                        remediationActionId = link.remediationActionId,
+                        primary = link.primary,
+                        impact = link.impact
+                    )
+                }
             )
         }.orElse(null)
     }
@@ -105,7 +113,15 @@ class YamlService(
             RemediationAction(
                 id = entity.id,
                 name = entity.name,
-                description = entity.description
+                description = entity.description,
+                type = entity.type,
+                implementationComplexity = entity.implementationComplexity,
+                timeInvestment = entity.timeInvestment,
+                costInvestment = entity.costInvestment,
+                expectedOutcomes = entity.expectedOutcomes.toList(),
+                implementationSteps = entity.implementationSteps.toList(),
+                successMetrics = entity.successMetrics.toList(),
+                resourcesNeeded = entity.resourcesNeeded.toList()
             )
         }.orElse(null)
     }
@@ -122,6 +138,7 @@ class YamlService(
             name = metric.name,
             description = metric.description,
             type = metric.type,
+            categories = metric.categories.toMutableList(),
             relationships = relationships
         )
         
@@ -140,11 +157,23 @@ class YamlService(
         val entity = DrivingFactorEntity(
             id = factor.id,
             name = factor.name,
-            description = factor.description
+            description = factor.description,
+            type = factor.type,
+            subcategory = factor.subcategory,
+            impactAreas = factor.impactAreas.toMutableList()
         )
         
-        factor.remediationActions.forEach { actionId ->
-            remediationActionRepository.findById(actionId).ifPresent { actionEntity ->
+        // Add remediation action links
+        factor.remediationActionLinks.forEach { link ->
+            val actionLink = DrivingFactorRemediationActionLink(
+                remediationActionId = link.remediationActionId,
+                primary = link.primary,
+                impact = link.impact
+            )
+            entity.remediationActionLinks.add(actionLink)
+            
+            // Also maintain the many-to-many relationship
+            remediationActionRepository.findById(link.remediationActionId).ifPresent { actionEntity ->
                 entity.remediationActions.add(actionEntity)
                 actionEntity.drivingFactors.add(entity)
             }
@@ -158,7 +187,15 @@ class YamlService(
         val entity = RemediationActionEntity(
             id = action.id,
             name = action.name,
-            description = action.description
+            description = action.description,
+            type = action.type,
+            implementationComplexity = action.implementationComplexity,
+            timeInvestment = action.timeInvestment,
+            costInvestment = action.costInvestment,
+            expectedOutcomes = action.expectedOutcomes.toMutableList(),
+            implementationSteps = action.implementationSteps.toMutableList(),
+            successMetrics = action.successMetrics.toMutableList(),
+            resourcesNeeded = action.resourcesNeeded.toMutableList()
         )
         remediationActionRepository.save(entity)
     }

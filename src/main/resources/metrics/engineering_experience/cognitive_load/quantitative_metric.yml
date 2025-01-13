@@ -2,6 +2,9 @@ id: 'code_cognitive_complexity'
 name: 'Code Cognitive Complexity'
 description: 'Quantitative measure of cognitive complexity in code based on cyclomatic complexity, nesting levels, and code structure'
 type: 'quantitative'
+categories:
+  - 'ex'
+  - 'cognitive_load'
 drivingFactors:
   - 'code_complexity'
   - 'technical_debt_burden'

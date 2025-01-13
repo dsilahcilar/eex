@@ -2,6 +2,9 @@ id: 'deep_work_satisfaction'
 name: 'Deep Work Satisfaction'
 description: 'Measures developers ability to achieve and maintain flow state during work'
 type: 'qualitative'
+categories:
+  - 'ex'
+  - 'flow'
 drivingFactors:
   - 'manual_process_overhead'
   - 'development_environment_issues'

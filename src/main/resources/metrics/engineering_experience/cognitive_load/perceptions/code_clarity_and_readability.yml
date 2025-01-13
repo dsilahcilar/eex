@@ -2,6 +2,9 @@ id: 'code_clarity_and_readability'
 name: 'Code Clarity and Readability'
 description: 'Measures developers perception of code readability, documentation quality, and overall clarity of the codebase'
 type: 'qualitative'
+categories:
+  - 'ex'
+  - 'cognitive_load'
 drivingFactors:
   - 'code_complexity'
   - 'knowledge_sharing_gaps'

@@ -2,6 +2,9 @@ id: 'system_complexity_perception'
 name: 'System Complexity Perception'
 description: 'Measures developers perception of system complexity and its impact on their cognitive load'
 type: 'qualitative'
+categories:
+  - 'ex'
+  - 'cognitive_load'
 drivingFactors:
   - 'code_complexity'
   - 'technical_debt_burden'
@@ -10,13 +13,12 @@ relationships:
     - 'developer_satisfaction'
   laggingIndicators:
     - 'defect_density'
-    - 'code_review_coverage'
 
 survey:
   question: 'How would you rate the cognitive load required to understand and work with the current system architecture?'
   options:
     - 'Very Low - System is well-structured and easy to understand'
     - 'Low - System is mostly clear with some complex areas'
-    - 'Moderate - Requires significant effort to understand parts of the system'
-    - 'High - System is complex and requires extensive mental mapping'
-    - 'Very High - System is overly complex and difficult to reason about'
+    - 'Moderate - System requires significant effort to understand'
+    - 'High - System is complex and difficult to understand'
+    - 'Very High - System is extremely complex and overwhelming'

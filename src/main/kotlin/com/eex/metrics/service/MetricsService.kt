@@ -1,11 +1,7 @@
 package com.eex.metrics.service
 
-import com.eex.metrics.entity.MetricEntity
-import com.eex.metrics.entity.MetricRelationshipsEntity
-import com.eex.metrics.model.DrivingFactor
-import com.eex.metrics.model.Metric
-import com.eex.metrics.model.MetricRelationships
-import com.eex.metrics.model.RemediationAction
+import com.eex.metrics.entity.*
+import com.eex.metrics.model.*
 import com.eex.metrics.repository.DrivingFactorRepository
 import com.eex.metrics.repository.MetricRepository
 import com.eex.metrics.repository.RemediationActionRepository
@@ -26,6 +22,7 @@ class MetricsService(
                 name = entity.name,
                 description = entity.description,
                 type = entity.type,
+                categories = entity.categories.toList(),
                 drivingFactors = entity.drivingFactors.map { it.id },
                 relationships = MetricRelationships(
                     leadingIndicators = entity.relationships.leadingIndicators,
@@ -42,6 +39,7 @@ class MetricsService(
                 name = entity.name,
                 description = entity.description,
                 type = entity.type,
+                categories = entity.categories.toList(),
                 drivingFactors = entity.drivingFactors.map { it.id },
                 relationships = MetricRelationships(
                     leadingIndicators = entity.relationships.leadingIndicators,
@@ -62,6 +60,7 @@ class MetricsService(
             name = metric.name,
             description = metric.description,
             type = metric.type,
+            categories = metric.categories.toMutableList(),
             relationships = relationships
         )
 
@@ -78,6 +77,7 @@ class MetricsService(
             name = savedEntity.name,
             description = savedEntity.description,
             type = savedEntity.type,
+            categories = savedEntity.categories.toList(),
             drivingFactors = savedEntity.drivingFactors.map { it.id },
             relationships = MetricRelationships(
                 leadingIndicators = savedEntity.relationships.leadingIndicators,
@@ -92,8 +92,17 @@ class MetricsService(
                 id = entity.id,
                 name = entity.name,
                 description = entity.description,
+                type = entity.type,
+                subcategory = entity.subcategory,
+                impactAreas = entity.impactAreas.toList(),
                 metricsImpacted = entity.metrics.map { it.id },
-                remediationActions = entity.remediationActions.map { it.id }
+                remediationActionLinks = entity.remediationActionLinks.map { link ->
+                    RemediationActionLink(
+                        remediationActionId = link.remediationActionId,
+                        primary = link.primary,
+                        impact = link.impact
+                    )
+                }
             )
         }.orElse(null)
     }
@@ -104,8 +113,17 @@ class MetricsService(
                 id = entity.id,
                 name = entity.name,
                 description = entity.description,
+                type = entity.type,
+                subcategory = entity.subcategory,
+                impactAreas = entity.impactAreas.toList(),
                 metricsImpacted = entity.metrics.map { it.id },
-                remediationActions = entity.remediationActions.map { it.id }
+                remediationActionLinks = entity.remediationActionLinks.map { link ->
+                    RemediationActionLink(
+                        remediationActionId = link.remediationActionId,
+                        primary = link.primary,
+                        impact = link.impact
+                    )
+                }
             )
         }
     }
@@ -115,7 +133,15 @@ class MetricsService(
             RemediationAction(
                 id = entity.id,
                 name = entity.name,
-                description = entity.description
+                description = entity.description,
+                type = entity.type,
+                implementationComplexity = entity.implementationComplexity,
+                timeInvestment = entity.timeInvestment,
+                costInvestment = entity.costInvestment,
+                expectedOutcomes = entity.expectedOutcomes.toList(),
+                implementationSteps = entity.implementationSteps.toList(),
+                successMetrics = entity.successMetrics.toList(),
+                resourcesNeeded = entity.resourcesNeeded.toList()
             )
         }.orElse(null)
     }
@@ -125,7 +151,15 @@ class MetricsService(
             RemediationAction(
                 id = entity.id,
                 name = entity.name,
-                description = entity.description
+                description = entity.description,
+                type = entity.type,
+                implementationComplexity = entity.implementationComplexity,
+                timeInvestment = entity.timeInvestment,
+                costInvestment = entity.costInvestment,
+                expectedOutcomes = entity.expectedOutcomes.toList(),
+                implementationSteps = entity.implementationSteps.toList(),
+                successMetrics = entity.successMetrics.toList(),
+                resourcesNeeded = entity.resourcesNeeded.toList()
             )
         }
     }

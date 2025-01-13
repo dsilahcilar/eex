@@ -2,8 +2,8 @@ id: 'time_spent_on_strategic_initiatives'
 name: 'Time Spent on Strategic Initiatives'
 description: 'Measures the percentage of development time spent on strategic initiatives versus maintenance work'
 type: 'quantitative'
-category: 'impact'
-
+categories:
+  - 'impact'
 data_source:
   - 'Project management system'
   - 'Time tracking tools'

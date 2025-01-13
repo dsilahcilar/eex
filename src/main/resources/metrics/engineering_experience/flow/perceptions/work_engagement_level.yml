@@ -2,6 +2,9 @@ id: 'work_engagement_level'
 name: 'Work Engagement Level'
 description: 'Measures developers perception of work meaningfulness, challenge level, and overall engagement with their tasks'
 type: 'qualitative'
+categories:
+  - 'ex'
+  - 'flow'
 drivingFactors:
   - 'skill_development_needs'
   - 'unclear_requirements'

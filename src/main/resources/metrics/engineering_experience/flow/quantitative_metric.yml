@@ -2,6 +2,9 @@ id: 'context_switching_frequency'
 name: 'Context Switching Frequency'
 description: 'Measures how often developers need to switch between different tasks or projects during their workday'
 type: 'quantitative'
+categories:
+  - 'ex'
+  - 'flow'
 drivingFactors:
   - 'manual_process_overhead'
   - 'unclear_requirements'

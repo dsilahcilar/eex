@@ -59,10 +59,10 @@ class GraphService(
             }
 
             // Add relationships to remediation actions
-            factor.remediationActions.forEach { actionId ->
+            factor.remediationActionLinks.forEach { link ->
                 edges.add(GraphEdge(
                     source = factor.id,
-                    target = actionId,
+                    target = link.remediationActionId,
                     type = EdgeType.REMEDIATED_BY
                 ))
             }
@@ -81,4 +81,5 @@ class GraphService(
 
         return RelationshipGraph(nodes = nodes, edges = edges)
     }
-} 
+}
+

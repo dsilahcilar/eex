@@ -2,7 +2,9 @@ id: 'feedback_quantitative_metric'
 name: 'Feedback Response Time'
 description: 'Measures the time taken to receive responses for different types of questions and code reviews'
 type: 'quantitative'
-category: 'feedback'
+categories:
+  - 'ex'
+  - 'feedback'
 
 data_source:
   - 'Code review system'
