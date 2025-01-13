@@ -5,7 +5,11 @@ type: 'quantitative'
 categories:
   - 'ex'
   - 'feedback'
-
+drivingFactors:
+  - 'team_collaboration_issues'
+  - 'knowledge_sharing_gaps'
+  - 'workflow_inefficiencies'
+  - 'manual_process_overhead'
 data_source:
   - 'Code review system'
   - 'Issue tracking system'
