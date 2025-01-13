@@ -116,4 +116,9 @@ class MetricValueController(private val metricValueService: MetricValueService) 
             metricValueService.getMetricValuesByTeamAndMetricAndTimeRange(teamId, metricId, startTime, endTime)
         )
     }
+
+    @GetMapping("/core-values/team/{teamId}")
+    fun getCoreMetricsForTeam(@PathVariable teamId: String): List<MetricValue> {
+        return metricValueService.getCoreMetricsForTeam(teamId)
+    }
 } 

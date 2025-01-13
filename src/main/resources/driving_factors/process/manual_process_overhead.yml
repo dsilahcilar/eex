@@ -1,0 +1,51 @@
+id: 'manual_process_overhead'
+name: 'Manual Process Overhead'
+description: 'Excessive manual steps and processes that interrupt development flow and reduce productivity'
+type: 'process'
+subcategory: 'development_workflow'
+impact_areas:
+  - 'Developer productivity'
+  - 'Process efficiency'
+  - 'Development flow'
+  - 'Team satisfaction'
+
+remediation_actions:
+  - id: 'process_automation_initiative'
+    primary: true
+    impact: 'HIGH'
+  - id: 'workflow_optimization'
+    primary: true
+    impact: 'HIGH'
+  - id: 'cicd_pipeline_enhancement'
+    primary: false
+    impact: 'MEDIUM'
+
+metric_impacts:
+  deep_work_satisfaction:
+    severity: 'HIGH'
+    description: 'Manual processes frequently interrupt flow state'
+  
+  deployment_frequency:
+    severity: 'HIGH'
+    description: 'Manual overhead slows down deployment process'
+  
+  lead_time_for_changes:
+    severity: 'MEDIUM'
+    description: 'Manual steps increase cycle time'
+  
+  work_engagement_level:
+    severity: 'MEDIUM'
+    description: 'Repetitive manual tasks reduce engagement'
+
+impact_indicators:
+  high_severity_signals:
+    - 'Frequent context switching'
+    - 'High time on manual tasks'
+    - 'Process bottlenecks'
+    - 'Developer complaints'
+  
+  warning_signals:
+    - 'Increasing process time'
+    - 'Rising error rates'
+    - 'Task backlogs'
+    - 'Workflow inconsistencies' 

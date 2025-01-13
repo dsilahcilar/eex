@@ -2,6 +2,7 @@ package com.eex.metrics.controller
 
 import com.eex.metrics.model.DrivingFactor
 import com.eex.metrics.model.Metric
+import com.eex.metrics.model.MetricValue
 import com.eex.metrics.model.RemediationAction
 import com.eex.metrics.service.MetricsService
 import io.swagger.v3.oas.annotations.Operation

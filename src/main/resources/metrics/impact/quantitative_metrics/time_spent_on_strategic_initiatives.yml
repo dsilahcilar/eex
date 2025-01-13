@@ -4,6 +4,11 @@ description: 'Measures the percentage of development time spent on strategic ini
 type: 'quantitative'
 categories:
   - 'impact'
+drivingFactors:
+  - 'skill_development_needs'
+  - 'unclear_requirements'
+  - 'workflow_inefficiencies'
+  - 'technical_debt_burden'
 data_source:
   - 'Project management system'
   - 'Time tracking tools'

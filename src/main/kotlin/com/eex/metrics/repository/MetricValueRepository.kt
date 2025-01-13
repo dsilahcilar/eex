@@ -12,4 +12,6 @@ interface MetricValueRepository : JpaRepository<MetricValueEntity, String> {
     fun findByTeamIdAndMetricId(teamId: String, metricId: String): List<MetricValueEntity>
     fun findByTeamIdAndTimestampBetween(teamId: String, startTime: Instant, endTime: Instant): List<MetricValueEntity>
     fun findByTeamIdAndMetricIdAndTimestampBetween(teamId: String, metricId: String, startTime: Instant, endTime: Instant): List<MetricValueEntity>
+    fun findByMetricIdAndTeamId(metricId: String, teamId: String): List<MetricValueEntity>
+    fun findByTeamIdAndMetricIdIn(teamId: String, metricIds: List<String>): List<MetricValueEntity>
 } 

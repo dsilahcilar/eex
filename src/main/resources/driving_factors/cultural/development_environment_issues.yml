@@ -1,0 +1,51 @@
+id: 'development_environment_issues'
+name: 'Development Environment Issues'
+description: 'Problems and friction points in development environments that disrupt workflow and reduce productivity'
+type: 'cultural'
+subcategory: 'developer_satisfaction'
+impact_areas:
+  - 'Developer productivity'
+  - 'Development flow'
+  - 'Code quality'
+  - 'Team morale'
+
+remediation_actions:
+  - id: 'developer_experience_optimization'
+    primary: true
+    impact: 'HIGH'
+  - id: 'workflow_optimization'
+    primary: false
+    impact: 'MEDIUM'
+  - id: 'process_automation_initiative'
+    primary: false
+    impact: 'MEDIUM'
+
+metric_impacts:
+  deep_work_satisfaction:
+    severity: 'HIGH'
+    description: 'Environment issues directly disrupt flow state and focus'
+  
+  deployment_process_ease:
+    severity: 'HIGH'
+    description: 'Environment problems complicate deployment processes'
+  
+  code_clarity_and_readability:
+    severity: 'MEDIUM'
+    description: 'Environment friction affects code quality'
+  
+  work_engagement_level:
+    severity: 'MEDIUM'
+    description: 'Environment issues reduce motivation and satisfaction'
+
+impact_indicators:
+  high_severity_signals:
+    - 'Environment setup failures'
+    - 'Tool compatibility issues'
+    - 'Local-prod inconsistencies'
+    - 'Development delays'
+  
+  warning_signals:
+    - 'Increasing setup time'
+    - 'Tool performance issues'
+    - 'Configuration drift'
+    - 'Environment-specific bugs' 

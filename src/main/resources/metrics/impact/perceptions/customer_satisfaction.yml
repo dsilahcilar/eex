@@ -4,6 +4,11 @@ description: 'Measures the overall satisfaction level of customers with the soft
 type: 'qualitative'
 categories:
   - 'impact'
+drivingFactors:
+  - 'reliability_issues'
+  - 'quality_control_gaps'
+  - 'performance_bottlenecks'
+  - 'unclear_requirements'
 data_source:
   - 'Customer surveys'
   - 'Feedback forms'

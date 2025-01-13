@@ -95,12 +95,13 @@ class DataInitializationService(
                         .atZone(ZoneId.systemDefault())
                         .toInstant()
 
-                    val value = when (metric.id) {
-                        "deployment_frequency" -> Random().nextDouble() * 50 + 10 // 10-60 deployments per month
-                        "lead_time_for_changes" -> Random().nextDouble() * 48 + 12 // 12-60 hours
-                        "change_failure_rate" -> Random().nextDouble() * 15 // 0-15%
-                        "mean_time_to_recovery" -> Random().nextDouble() * 4 + 1 // 1-5 hours
-                        "system_availability" -> Random().nextDouble() * 1 + 99 // 99-100%
+                    val value = when {
+                        metric.type == "qualitative" -> Random().nextDouble() * 4 + 1 // 1-5 for qualitative metrics
+                        metric.id == "deployment_frequency" -> Random().nextDouble() * 30 + 1 // 1-31 deployments per month
+                        metric.id == "lead_time_for_changes" -> Random().nextDouble() * 59 + 1 // 1-60 days
+                        metric.id == "change_failure_rate" -> Random().nextDouble() * 15 // 0-15%
+                        metric.id == "mean_time_to_recovery" -> Random().nextDouble() * 24 + 1 // 1-25 hours
+                        metric.id == "system_availability" -> Random().nextDouble() * 1 + 99 // 99-100%
                         else -> generateRandomMetricValue()
                     }
 

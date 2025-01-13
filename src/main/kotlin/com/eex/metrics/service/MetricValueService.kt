@@ -2,6 +2,7 @@ package com.eex.metrics.service
 
 import com.eex.metrics.entity.MetricValueEntity
 import com.eex.metrics.model.MetricValue
+import com.eex.metrics.repository.MetricRepository
 import com.eex.metrics.repository.MetricValueRepository
 import org.springframework.stereotype.Service
 import java.time.Instant
@@ -9,7 +10,8 @@ import java.util.*
 
 @Service
 class MetricValueService(
-    private val metricValueRepository: MetricValueRepository
+    private val metricValueRepository: MetricValueRepository,
+    private val metricRepository: MetricRepository
 ) {
     fun createMetricValue(metricValue: MetricValue): MetricValue {
         val entity = MetricValueEntity(
@@ -51,5 +53,29 @@ class MetricValueService(
     ): List<MetricValue> {
         return metricValueRepository.findByTeamIdAndMetricIdAndTimestampBetween(teamId, metricId, startTime, endTime)
             .map { it.toModel() }
+    }
+
+    fun getCoreMetricsForTeam(teamId: String): List<MetricValue> {
+        val coreCategories = setOf("speed", "quality", "impact")
+        return metricValueRepository.findByTeamId(teamId)
+            .filter { metricValue ->
+                val metric = metricRepository.findById(metricValue.metricId)
+                metric.isPresent && metric.get().categories.any { it in coreCategories }
+            }
+            .map { it.toModel() }
+    }
+
+    private fun getMetricValues(metricId: String, teamId: String): List<MetricValue> {
+        return metricValueRepository.findByMetricIdAndTeamId(metricId, teamId)
+            .map { entity ->
+                MetricValue(
+                    id = entity.id,
+                    metricId = entity.metricId,
+                    teamId = entity.teamId,
+                    value = entity.value,
+                    timestamp = entity.timestamp,
+                    notes = entity.notes
+                )
+            }
     }
 } 
