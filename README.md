@@ -29,6 +29,9 @@ To keep your data current, update your metrics regularly—our recommendation is
 This repository is built to support the open-source contribution model.
 
 * 	Add New Items: You can contribute by adding new driving factors, remediation actions, or metrics. Simply create a pull request (PR) in the relevant section.
+* [Driving factors](src/main/resources/driving_factors/technical/insufficient_test_coverage.yml)
+* [Metrics](src/main/resources/metrics/speed/lead_time_for_changes.yml)
+* [Remediation Actions](src/main/resources/remediation_actions/technical/contract_testing.yml)
 * Share Your Experiences:
 * *	Update existing items with insights from your experience.
 * *	Share how these items have impacted your teams.
@@ -37,26 +40,29 @@ We look forward to your contributions and experiences to enhance the repository 
 
 ## Screenshots 
 See all teams under your departments: 
-![img.png](img.png)
+![img.png](docs/static/img.png)
 
 **4 Core  metrics** 
-![img_1.png](img_1.png)
+![img_1.png](docs/static/img_1.png)
 
 **Latest metrics for a team** 
-![img_2.png](img_2.png)
+![img_2.png](docs/static/img_2.png)
 
 **Trends** 
-![img_3.png](img_3.png)
+![img_3.png](docs/static/img_3.png)
 
 **Metrics**
-![img_4.png](img_4.png)
+![img_4.png](docs/static/img_4.png)
 
-![img_5.png](img_5.png)
+![img_5.png](docs/static/img_5.png)
 
 **Driving Factors and Remediation Actions**
-![img_6.png](img_6.png)
-![img_7.png](img_7.png)
+![img_6.png](docs/static/img_6.png)
+![img_7.png](docs/static/img_7.png)
 
-![img_8.png](img_8.png)
+![img_8.png](docs/static/img_8.png)
 
-![img_9.png](img_9.png)
+![img_9.png](docs/static/img_9.png)
+
+**Metric Graph**
+![img.png](docs/static/metric_graph.png)

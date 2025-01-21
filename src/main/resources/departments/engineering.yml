@@ -1,7 +1,0 @@
-id: 'engineering'
-name: 'Engineering'
-description: 'Main engineering department responsible for product development'
-parentDepartmentId: null
-subDepartmentIds: []
-teamIds: ['backend-team', 'frontend-team']
-metricIds: ['deployment_frequency', 'lead_time_for_changes'] 
